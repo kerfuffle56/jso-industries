@@ -18,57 +18,119 @@ export default function Contact() {
   }, []);
 
   return (
-    <section id="contact" className="py-32 md:py-40 bg-white" ref={sectionRef}>
+    <section id="contact" className="py-28 md:py-36 bg-white" ref={sectionRef}>
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
           {/* Left */}
           <div className={visible ? "animate-fade-in-up" : "opacity-0"}>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-dark tracking-tight leading-tight">
-              LET&apos;S
+            <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">
+              Get In Touch
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary-dark tracking-tight leading-tight">
+              Let&apos;s
               <br />
-              <span className="text-accent">TALK</span>
+              <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
+                Talk
+              </span>
             </h2>
-            <div className="mt-4 w-20 h-1 bg-accent" />
-            <p className="mt-8 text-lg text-gray-mid">
-              Ready to start your next project? Get in touch for a free estimate.
+            <p className="mt-8 text-base text-gray-mid leading-relaxed">
+              Ready to start your next project? Get in touch for a free
+              estimate.
             </p>
 
             {/* Contact Info */}
-            <div className="mt-12 space-y-6">
-              <a href="tel:9144194449" className="flex items-center gap-4 group">
-                <div className="w-14 h-14 bg-gray-light flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            <div className="mt-10 space-y-5">
+              <a
+                href="tel:9144194449"
+                className="flex items-center gap-4 group"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gray-light flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                    />
                   </svg>
                 </div>
                 <div>
-                  <div className="text-sm text-gray-mid uppercase tracking-wide">Phone</div>
-                  <div className="text-lg font-semibold text-primary-dark">(914) 419-4449</div>
+                  <div className="text-xs text-gray-mid uppercase tracking-wider font-medium">
+                    Phone
+                  </div>
+                  <div className="text-base font-semibold text-primary-dark">
+                    (914) 419-4449
+                  </div>
                 </div>
               </a>
 
-              <a href="mailto:info@jsoindustries.com" className="flex items-center gap-4 group">
-                <div className="w-14 h-14 bg-gray-light flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              <a
+                href="mailto:office@jsoindustries.com"
+                className="flex items-center gap-4 group"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gray-light flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                    />
                   </svg>
                 </div>
                 <div>
-                  <div className="text-sm text-gray-mid uppercase tracking-wide">Email</div>
-                  <div className="text-lg font-semibold text-primary-dark">info@jsoindustries.com</div>
+                  <div className="text-xs text-gray-mid uppercase tracking-wider font-medium">
+                    Email
+                  </div>
+                  <div className="text-base font-semibold text-primary-dark">
+                    office@jsoindustries.com
+                  </div>
                 </div>
               </a>
 
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-gray-light flex items-center justify-center text-accent">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                <div className="w-12 h-12 rounded-xl bg-gray-light flex items-center justify-center text-accent">
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                    />
                   </svg>
                 </div>
                 <div>
-                  <div className="text-sm text-gray-mid uppercase tracking-wide">Location</div>
-                  <div className="text-lg font-semibold text-primary-dark">New York, NY</div>
+                  <div className="text-xs text-gray-mid uppercase tracking-wider font-medium">
+                    Serving
+                  </div>
+                  <div className="text-base font-semibold text-primary-dark leading-relaxed">
+                    Westchester County, NY
+                    <br />
+                    Fairfield County, CT
+                    <br />
+                    New York, NY
+                  </div>
                 </div>
               </div>
             </div>
@@ -77,16 +139,20 @@ export default function Contact() {
           {/* Right - Contact Form */}
           <div className={visible ? "animate-fade-in-up-delay-2" : "opacity-0"}>
             <form
-              action="https://formsubmit.co/info@jsoindustries.com"
+              action="https://formsubmit.co/office@jsoindustries.com"
               method="POST"
-              className="space-y-6"
+              className="space-y-5"
             >
               <input type="text" name="_honey" className="hidden" />
               <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://jsoindustries.com/thank-you" />
 
-              <div className="grid sm:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-dark mb-2 uppercase tracking-wide">
+                  <label
+                    htmlFor="name"
+                    className="block text-xs font-medium text-gray-dark mb-2 uppercase tracking-wider"
+                  >
                     Name
                   </label>
                   <input
@@ -94,24 +160,30 @@ export default function Contact() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-4 bg-gray-light border-0 focus:ring-2 focus:ring-accent outline-none transition-all text-primary-dark"
+                    className="w-full px-4 py-3.5 bg-gray-light rounded-xl border border-transparent focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-primary-dark text-sm"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-dark mb-2 uppercase tracking-wide">
+                  <label
+                    htmlFor="phone"
+                    className="block text-xs font-medium text-gray-dark mb-2 uppercase tracking-wider"
+                  >
                     Phone
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full px-4 py-4 bg-gray-light border-0 focus:ring-2 focus:ring-accent outline-none transition-all text-primary-dark"
+                    className="w-full px-4 py-3.5 bg-gray-light rounded-xl border border-transparent focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-primary-dark text-sm"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-dark mb-2 uppercase tracking-wide">
+                <label
+                  htmlFor="email"
+                  className="block text-xs font-medium text-gray-dark mb-2 uppercase tracking-wider"
+                >
                   Email
                 </label>
                 <input
@@ -119,31 +191,38 @@ export default function Contact() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-4 bg-gray-light border-0 focus:ring-2 focus:ring-accent outline-none transition-all text-primary-dark"
+                  className="w-full px-4 py-3.5 bg-gray-light rounded-xl border border-transparent focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-primary-dark text-sm"
                 />
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-dark mb-2 uppercase tracking-wide">
+                <label
+                  htmlFor="service"
+                  className="block text-xs font-medium text-gray-dark mb-2 uppercase tracking-wider"
+                >
                   Service
                 </label>
                 <select
                   id="service"
                   name="service"
-                  className="w-full px-4 py-4 bg-gray-light border-0 focus:ring-2 focus:ring-accent outline-none transition-all text-primary-dark"
+                  className="w-full px-4 py-3.5 bg-gray-light rounded-xl border border-transparent focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-primary-dark text-sm"
                 >
                   <option value="">Select a service...</option>
                   <option value="commercial">Commercial Construction</option>
                   <option value="residential">Residential Construction</option>
-                  <option value="home-improvement">Home Improvement</option>
-                  <option value="renovation">Interior Renovation</option>
-                  <option value="exterior">Exterior &amp; Structural</option>
+                  <option value="renovations">Renovations</option>
+                  <option value="civil">Civil Construction</option>
+                  <option value="project-management">Project Management</option>
+                  <option value="specialty-trades">Specialty Trades</option>
                   <option value="other">Other</option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-dark mb-2 uppercase tracking-wide">
+                <label
+                  htmlFor="message"
+                  className="block text-xs font-medium text-gray-dark mb-2 uppercase tracking-wider"
+                >
                   Message
                 </label>
                 <textarea
@@ -151,13 +230,13 @@ export default function Contact() {
                   name="message"
                   rows={5}
                   required
-                  className="w-full px-4 py-4 bg-gray-light border-0 focus:ring-2 focus:ring-accent outline-none transition-all text-primary-dark resize-none"
+                  className="w-full px-4 py-3.5 bg-gray-light rounded-xl border border-transparent focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-primary-dark resize-none text-sm"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-accent hover:bg-primary-dark text-white px-8 py-5 text-lg font-semibold transition-all uppercase tracking-wide"
+                className="w-full bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/25"
               >
                 Send Message
               </button>

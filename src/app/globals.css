@@ -2,14 +2,16 @@
 
 @theme inline {
   --color-background: #ffffff;
-  --color-foreground: #1a1a2e;
-  --color-primary: #1e3a5f;
-  --color-primary-light: #2563eb;
-  --color-primary-dark: #0f1d30;
-  --color-accent: #3b82f6;
-  --color-gray-light: #f1f5f9;
-  --color-gray-mid: #94a3b8;
+  --color-foreground: #0f172a;
+  --color-primary: #1e293b;
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #0f172a;
+  --color-accent: #2563eb;
+  --color-accent-light: #60a5fa;
+  --color-gray-light: #f8fafc;
+  --color-gray-mid: #64748b;
   --color-gray-dark: #334155;
+  --color-border: #e2e8f0;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -28,7 +30,7 @@ body {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -36,51 +38,63 @@ body {
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-fade-in-up-delay-1 {
-  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
   opacity: 0;
 }
 
 .animate-fade-in-up-delay-2 {
-  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
   opacity: 0;
 }
 
 .animate-fade-in-up-delay-3 {
-  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
   opacity: 0;
 }
 
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, #3b82f6, #1e3a5f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Hero gradient with animation */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-/* Hero background overlay */
 .hero-gradient {
-  background: linear-gradient(135deg, #0f1d30 0%, #1e3a5f 50%, #1a1a2e 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 30%, #1e293b 60%, #0f172a 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 12s ease infinite;
 }
 
 /* Glass effect */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Service card hover */
 .service-card {
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(30, 58, 95, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+}
+
+/* Subtle grid pattern for hero */
+.hero-pattern {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
