@@ -25,26 +25,18 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
-          : "bg-transparent"
+          ? "bg-black/90 backdrop-blur-xl border-b border-white/[0.06] shadow-lg"
+          : "bg-black/30 backdrop-blur-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center">
         {/* Logo */}
         <a href="#home" className="flex-shrink-0 flex items-center gap-3">
           <div className="flex flex-col">
-            <span
-              className={`text-2xl lg:text-[1.7rem] font-bold tracking-tight leading-none ${
-                scrolled ? "text-primary-dark" : "text-white"
-              }`}
-            >
+            <span className="text-2xl lg:text-[1.7rem] font-bold tracking-tight leading-none text-white">
               JSO
             </span>
-            <span
-              className={`text-[0.6rem] lg:text-[0.65rem] font-semibold tracking-[0.2em] uppercase ${
-                scrolled ? "text-gray-mid" : "text-white/50"
-              }`}
-            >
+            <span className="text-[0.6rem] lg:text-[0.65rem] font-semibold tracking-[0.2em] uppercase text-white/40">
               Industries Inc.
             </span>
           </div>
@@ -56,9 +48,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className={`text-base font-medium tracking-wide transition-colors duration-200 hover:text-accent ${
-                scrolled ? "text-gray-dark" : "text-white/80"
-              }`}
+              className="text-base font-medium tracking-wide text-white/70 hover:text-white transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -83,14 +73,10 @@ export default function Navbar() {
             />
           </a>
           <a
-            href="tel:9144194449"
-            className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
-              scrolled
-                ? "bg-accent text-white hover:bg-accent/90 shadow-md shadow-accent/20"
-                : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
-            }`}
+            href="#contact"
+            className="px-6 py-2.5 rounded text-sm font-bold uppercase tracking-wide bg-accent text-white hover:bg-accent/90 shadow-md shadow-accent/20 transition-all duration-300"
           >
-            (914) 419-4449
+            Free Estimate
           </a>
         </div>
 
@@ -100,50 +86,39 @@ export default function Navbar() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          <span
-            className={`w-6 h-0.5 rounded-full transition-all duration-300 ${
-              scrolled ? "bg-primary-dark" : "bg-white"
-            } ${mobileOpen ? "rotate-45 translate-y-2" : ""}`}
-          />
-          <span
-            className={`w-6 h-0.5 rounded-full transition-all duration-300 ${
-              scrolled ? "bg-primary-dark" : "bg-white"
-            } ${mobileOpen ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`w-6 h-0.5 rounded-full transition-all duration-300 ${
-              scrolled ? "bg-primary-dark" : "bg-white"
-            } ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`}
-          />
+          <span className={`w-6 h-0.5 rounded-full bg-white transition-all duration-300 ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`w-6 h-0.5 rounded-full bg-white transition-all duration-300 ${mobileOpen ? "opacity-0" : ""}`} />
+          <span className={`w-6 h-0.5 rounded-full bg-white transition-all duration-300 ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
         </button>
       </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-border">
+        <div className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-white/[0.06]">
           <div className="flex flex-col px-6 py-6 gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-base text-gray-dark font-medium hover:text-accent transition-colors py-1"
+                className="text-base text-white/70 font-medium hover:text-white transition-colors py-1"
               >
                 {link.label}
               </a>
             ))}
-            <div className="pt-4 border-t border-border flex flex-col gap-3">
+            <div className="pt-4 border-t border-white/[0.08] flex flex-col gap-3">
               <a
-                href="tel:9144194449"
-                className="bg-accent text-white text-center px-6 py-3.5 rounded-full text-sm font-semibold"
+                href="#contact"
+                onClick={() => setMobileOpen(false)}
+                className="bg-accent text-white text-center px-6 py-3.5 rounded text-sm font-bold uppercase tracking-wide"
               >
-                Call (914) 419-4449
+                Free Estimate
               </a>
               <a
                 href="https://instagram.com/JSO_Industries"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 text-sm text-gray-dark font-medium hover:text-accent transition-colors"
+                className="flex items-center justify-center gap-2 text-sm text-white/50 font-medium hover:text-white transition-colors"
               >
                 <Image
                   src="/logo-instagram.png"

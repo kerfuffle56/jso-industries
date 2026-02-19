@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 
 const reasons = [
   {
@@ -42,22 +39,8 @@ const reasons = [
 ];
 
 export default function WhyUs() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setVisible(true);
-      },
-      { threshold: 0.1 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section id="why-us" className="py-28 md:py-36 hero-gradient relative overflow-hidden" ref={sectionRef}>
+    <section id="why-us" className="py-28 md:py-36 hero-gradient relative overflow-hidden">
       {/* Subtle pattern */}
       <div className="absolute inset-0 hero-pattern" />
 
@@ -77,9 +60,7 @@ export default function WhyUs() {
           {reasons.map((reason, i) => (
             <div
               key={reason.title}
-              className={`rounded-2xl bg-white/[0.06] border border-white/[0.08] p-8 text-center backdrop-blur-sm hover:bg-white/[0.1] transition-all duration-300 ${
-                visible ? "animate-fade-in-up" : "opacity-0"
-              }`}
+              className="rounded-2xl bg-white/[0.06] border border-white/[0.08] p-8 text-center backdrop-blur-sm hover:bg-white/[0.1] transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <div className="w-12 h-12 rounded-xl bg-accent/20 text-accent-light flex items-center justify-center mx-auto mb-5">

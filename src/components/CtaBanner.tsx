@@ -3,25 +3,26 @@ export default function CtaBanner() {
     <section className="py-20 md:py-24 hero-gradient relative overflow-hidden">
       <div className="absolute inset-0 hero-pattern" />
       <div className="relative max-w-4xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
-          Ready to Start Your Project?
+        <div className="inline-flex items-center gap-3 mb-6">
+          <span className="w-8 h-[2px] bg-accent" />
+          <span className="text-xs font-semibold text-white/50 tracking-widest uppercase">Ready to Build</span>
+          <span className="w-8 h-[2px] bg-accent" />
+        </div>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[0.95]">
+          Let&apos;s Get to{" "}
+          <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
+            Work.
+          </span>
         </h2>
-        <p className="mt-4 text-lg text-white/50 max-w-xl mx-auto">
-          Get in touch for a free estimate. We&apos;re here to bring your
-          vision to life.
+        <p className="mt-5 text-lg text-white/45 max-w-md mx-auto">
+          Free estimates. No pressure. Just straight answers from an experienced crew.
         </p>
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="mt-10 flex justify-center">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 shadow-lg shadow-accent/25"
+            className="inline-flex items-center justify-center bg-accent hover:bg-accent/90 text-white px-10 py-4 rounded text-base font-bold tracking-wide transition-all duration-300 shadow-lg shadow-accent/30 uppercase"
           >
             Get a Free Estimate
-          </a>
-          <a
-            href="tel:9144194449"
-            className="inline-flex items-center justify-center bg-white/[0.07] hover:bg-white/[0.12] text-white border border-white/15 px-8 py-4 rounded-full text-base font-semibold transition-all duration-300"
-          >
-            (914) 419-4449
           </a>
         </div>
       </div>

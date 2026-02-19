@@ -35,19 +35,28 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
   },
   openGraph: {
-    title: "JSO Industries Inc. | Commercial & Residential Construction",
+    title: "JSO Industries Inc.",
     description:
       "Licensed and fully insured construction company serving Westchester County, Fairfield County, and New York. Commercial, residential, civil construction, renovations, and specialty trades.",
     url: "https://jsoindustries.com",
     siteName: "JSO Industries Inc.",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://jsoindustries.com/logo-company.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "JSO Industries Inc.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "JSO Industries Inc. | Commercial & Residential Construction",
+    title: "JSO Industries Inc.",
     description:
       "Licensed and fully insured construction company serving Westchester County, Fairfield County, and New York.",
+    images: ["https://jsoindustries.com/logo-company.jpeg"],
   },
 };
 
@@ -58,6 +67,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if('scrollRestoration'in history){history.scrollRestoration='manual';}window.scrollTo(0,0);`,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

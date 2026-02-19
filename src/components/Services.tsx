@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 
 const services = [
   {
@@ -66,29 +63,15 @@ const services = [
 ];
 
 export default function Services() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setVisible(true);
-      },
-      { threshold: 0.1 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section id="services" className="py-28 md:py-36 bg-white" ref={sectionRef}>
+    <section id="services" className="py-28 md:py-36 concrete-bg">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">
+          <p className="text-sm font-semibold text-accent-light uppercase tracking-widest mb-3">
             What We Do
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-dark tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
             Our Services
           </h2>
         </div>
@@ -98,29 +81,19 @@ export default function Services() {
           {services.map((service, i) => (
             <div
               key={service.title}
-              className={`service-card bg-gray-light rounded-2xl p-8 group ${
-                visible ? "animate-fade-in-up" : "opacity-0"
-              }`}
+              className="service-card relative bg-white/[0.06] border border-white/[0.08] rounded-2xl p-8 group animate-fade-in-up overflow-hidden"
               style={{ animationDelay: `${i * 0.08}s` }}
             >
-              <div className="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="w-12 h-12 rounded-xl bg-accent/20 text-accent-light flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-bold text-primary-dark mb-2.5 group-hover:text-accent transition-colors duration-300">
+              <h3 className="text-lg font-bold text-white mb-2.5 group-hover:text-accent-light transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="text-gray-mid text-[0.925rem] leading-relaxed">
+              <p className="text-white/55 text-[0.925rem] leading-relaxed">
                 {service.description}
               </p>
-              <a
-                href="#contact"
-                className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-accent hover:text-primary-dark transition-colors duration-200"
-              >
-                Learn More
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
             </div>
           ))}
         </div>
