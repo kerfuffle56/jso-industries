@@ -70,7 +70,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `if('scrollRestoration'in history){history.scrollRestoration='manual';}window.scrollTo(0,0);`,
+            __html: `if('scrollRestoration'in history){history.scrollRestoration='manual';}if(window.location.hash){history.replaceState(null,'',window.location.pathname);}window.scrollTo(0,0);document.addEventListener('DOMContentLoaded',function(){window.scrollTo(0,0);});`,
           }}
         />
       </head>

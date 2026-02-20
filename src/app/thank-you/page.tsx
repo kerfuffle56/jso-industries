@@ -26,7 +26,7 @@ export default function ThankYou() {
         </p>
         <a
           href="/"
-          className="inline-flex items-center justify-center mt-10 bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-full text-base font-semibold transition-all duration-300 shadow-lg shadow-accent/25"
+          className="inline-flex items-center justify-center mt-10 bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded text-base font-bold tracking-wide uppercase transition-all duration-300 shadow-lg shadow-accent/25"
         >
           Back to Home
         </a>

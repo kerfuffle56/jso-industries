@@ -1,7 +1,6 @@
 export default function CtaBanner() {
   return (
-    <section className="py-20 md:py-24 hero-gradient relative overflow-hidden">
-      <div className="absolute inset-0 hero-pattern" />
+    <section className="py-20 md:py-24 bg-[#0a0a0a]/95 backdrop-blur-sm border-t border-white/[0.06] relative">
       <div className="relative max-w-4xl mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-3 mb-6">
           <span className="w-8 h-[2px] bg-accent" />

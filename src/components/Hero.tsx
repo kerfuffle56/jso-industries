@@ -1,15 +1,9 @@
-import VantaBackground from "./VantaBackground";
-
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      <VantaBackground />
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-black/50" />
-
       <div className="relative z-10 text-center px-6 py-32 max-w-5xl mx-auto">
         {/* Badge */}
         <div className="animate-fade-in-up inline-flex items-center gap-3 mb-10">

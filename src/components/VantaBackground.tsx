@@ -109,7 +109,7 @@ export default function VantaBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full"
+      className="fixed inset-0 w-full h-full -z-10"
     />
   );
 }

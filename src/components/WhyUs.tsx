@@ -40,11 +40,8 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section id="why-us" className="py-28 md:py-36 hero-gradient relative overflow-hidden">
-      {/* Subtle pattern */}
-      <div className="absolute inset-0 hero-pattern" />
-
-      <div className="relative max-w-6xl mx-auto px-6">
+    <section id="why-us" className="py-28 md:py-36 bg-[#161616]/95 backdrop-blur-sm border-t border-white/[0.06] relative">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-accent-light uppercase tracking-widest mb-3">
