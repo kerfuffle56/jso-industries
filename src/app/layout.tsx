@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "JSO Industries Inc. | Commercial & Residential Construction | New York",
+  title: "JSO Industries Inc. | Licensed General Contractor | NY, CT & NJ",
   description:
-    "JSO Industries Inc. is a licensed home improvement contractor and fully insured construction company in NY and CT, specializing in commercial and residential construction.",
+    "JSO Industries Inc. is a licensed general contractor and fully insured construction company in NY, CT and NJ, specializing in commercial, residential, and civil construction management.",
   keywords: [
     "construction",
     "commercial construction",
@@ -23,11 +23,16 @@ export const metadata: Metadata = {
     "civil construction",
     "home improvement",
     "contractor",
+    "general contractor",
+    "construction management",
     "New York",
     "Westchester County",
     "Fairfield County",
     "Connecticut",
+    "New Jersey",
     "licensed contractor",
+    "general contractor New Jersey",
+    "general contractor New York",
     "JSO Industries",
   ],
   icons: {
@@ -37,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "JSO Industries Inc.",
     description:
-      "Licensed and fully insured construction company serving Westchester County, Fairfield County, and New York. Commercial, residential, civil construction, renovations, and specialty trades.",
+      "Licensed general contractor serving Westchester County, Fairfield County, New York, and New Jersey. Commercial, residential, civil construction, construction management, renovations, and specialty trades.",
     url: "https://jsoindustries.com",
     siteName: "JSO Industries Inc.",
     locale: "en_US",
@@ -55,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "JSO Industries Inc.",
     description:
-      "Licensed and fully insured construction company serving Westchester County, Fairfield County, and New York.",
+      "Licensed general contractor serving Westchester County, Fairfield County, New York, and New Jersey.",
     images: ["https://jsoindustries.com/logo-company.jpeg"],
   },
 };

@@ -58,7 +58,8 @@ export default function Contact() {
                   <div className="text-base font-semibold text-white leading-relaxed">
                     Westchester County, NY<br />
                     Fairfield County, CT<br />
-                    New York, NY
+                    New York, NY<br />
+                    New Jersey
                   </div>
                 </div>
               </div>
@@ -70,6 +71,7 @@ export default function Contact() {
             <form
               action="https://formsubmit.co/office@jsoindustries.com"
               method="POST"
+              encType="multipart/form-data"
               className="space-y-5"
             >
               <input type="text" name="_honey" className="hidden" />
@@ -100,7 +102,7 @@ export default function Contact() {
                   <option value="residential" className="bg-[#1a1a1a]">Residential Construction</option>
                   <option value="renovations" className="bg-[#1a1a1a]">Renovations</option>
                   <option value="civil" className="bg-[#1a1a1a]">Civil Construction</option>
-                  <option value="project-management" className="bg-[#1a1a1a]">Project Management</option>
+                  <option value="construction-management" className="bg-[#1a1a1a]">Construction Management</option>
                   <option value="specialty-trades" className="bg-[#1a1a1a]">Specialty Trades</option>
                   <option value="other" className="bg-[#1a1a1a]">Other</option>
                 </select>
@@ -109,6 +111,18 @@ export default function Contact() {
               <div>
                 <label htmlFor="message" className="block text-xs font-medium text-white/50 mb-2 uppercase tracking-wider">Message</label>
                 <textarea id="message" name="message" rows={5} required className="w-full px-4 py-3.5 bg-white/[0.07] rounded border border-white/[0.1] focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-white placeholder:text-white/30 resize-none text-sm" />
+              </div>
+
+              <div>
+                <label htmlFor="attachment" className="block text-xs font-medium text-white/50 mb-2 uppercase tracking-wider">Attach Files <span className="normal-case text-white/30">(plans, photos, docs — optional)</span></label>
+                <label htmlFor="attachment" className="flex items-center gap-3 w-full px-4 py-3.5 bg-white/[0.07] rounded border border-white/[0.1] hover:border-accent/50 transition-all cursor-pointer group">
+                  <svg className="w-5 h-5 text-white/40 group-hover:text-accent transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
+                  </svg>
+                  <span className="text-sm text-white/30 group-hover:text-white/60 transition-colors">Click to upload files</span>
+                  <input type="file" id="attachment" name="attachment" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.heic" className="hidden" />
+                </label>
+                <p className="mt-1.5 text-xs text-white/25">PDF, Word, images accepted</p>
               </div>
 
               <button type="submit" className="w-full bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded text-base font-bold tracking-wide uppercase transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/25">

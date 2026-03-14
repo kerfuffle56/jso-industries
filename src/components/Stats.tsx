@@ -1,7 +1,7 @@
 const stats = [
   { value: "100+", label: "Projects Completed" },
   { value: "15+", label: "Years Experience" },
-  { value: "2", label: "States Licensed" },
+  { value: "3", label: "States Licensed" },
   { value: "100%", label: "Fully Insured" },
 ];
 

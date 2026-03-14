@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="animate-fade-in-up inline-flex items-center gap-3 mb-10">
           <span className="w-8 h-[2px] bg-accent" />
           <span className="text-sm font-semibold text-white/60 tracking-widest uppercase">
-            Licensed & Fully Insured · NY & CT
+            Licensed General Contractor · NY, CT & NJ
           </span>
           <span className="w-8 h-[2px] bg-accent" />
         </div>
@@ -25,7 +25,7 @@ export default function Hero() {
 
         {/* Subheading */}
         <p className="animate-fade-in-up-delay-1 mt-10 text-lg md:text-xl text-white/45 max-w-lg mx-auto font-light leading-relaxed">
-          New York&apos;s licensed and insured construction company. Commercial, residential, and civil builds — no shortcuts, ever.
+          Licensed general contractor serving NY, CT &amp; NJ. Commercial, residential, and civil builds — no shortcuts, ever.
         </p>
 
         {/* CTA */}

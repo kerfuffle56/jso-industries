@@ -41,7 +41,7 @@ const services = [
     ),
   },
   {
-    title: "Project Management",
+    title: "Construction Management",
     description:
       "End-to-end oversight including scheduling, budgeting, permitting, and quality control.",
     icon: (

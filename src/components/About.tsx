@@ -16,10 +16,10 @@ export default function About() {
               </span>
             </h2>
             <p className="mt-8 text-base text-white/60 leading-relaxed">
-              JSO Industries Inc. is a New York-based construction company
-              serving commercial and residential clients. As a licensed home
-              improvement contractor, we bring professionalism, skill, and
-              dedication to every project.
+              JSO Industries Inc. is a licensed general contractor serving
+              commercial and residential clients across New York, New Jersey,
+              and Connecticut. We bring professionalism, skill, and dedication
+              to every project.
             </p>
             <p className="mt-5 text-base text-white/60 leading-relaxed">
               We are fully insured and committed to delivering results that

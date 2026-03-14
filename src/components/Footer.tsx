@@ -18,8 +18,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm leading-relaxed max-w-sm">
-              Licensed home improvement contractor and fully insured
-              construction company serving NY and CT.
+              Licensed general contractor and fully insured construction
+              company serving NY, CT and NJ.
             </p>
             <a
               href="https://instagram.com/JSO_Industries"
@@ -87,6 +87,7 @@ export default function Footer() {
               <li>Westchester County, NY</li>
               <li>Fairfield County, CT</li>
               <li>New York, NY</li>
+              <li>New Jersey</li>
             </ul>
           </div>
         </div>
@@ -94,7 +95,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-14 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/35">
           <p>&copy; {new Date().getFullYear()} JSO Industries Inc.</p>
-          <p>Licensed & Fully Insured in NY and CT</p>
+          <p>Licensed & Fully Insured in NY, CT and NJ</p>
         </div>
       </div>
     </footer>
