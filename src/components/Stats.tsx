@@ -1,9 +1,46 @@
+"use client";
+import { useEffect, useRef, useState } from "react";
+
 const stats = [
   { value: "100+", label: "Projects Completed" },
   { value: "15+", label: "Years Experience" },
   { value: "3", label: "States Licensed" },
   { value: "100%", label: "Fully Insured" },
 ];
+
+function CountUp({ value }: { value: string }) {
+  const num = parseInt(value);
+  const suffix = value.replace(/[0-9]/g, "");
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const ran = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !ran.current) {
+          ran.current = true;
+          const duration = 1200;
+          const start = performance.now();
+          const tick = (now: number) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            setCount(Math.round(eased * num));
+            if (progress < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [num]);
+
+  return <span ref={ref}>{count}{suffix}</span>;
+}
 
 export default function Stats() {
   return (
@@ -13,7 +50,7 @@ export default function Stats() {
           {stats.map((stat) => (
             <div key={stat.label} className="text-center py-2">
               <div className="text-4xl md:text-5xl font-black text-white tracking-tight">
-                {stat.value}
+                <CountUp value={stat.value} />
               </div>
               <div className="mt-1 text-sm font-medium text-white/75 uppercase tracking-wider">
                 {stat.label}

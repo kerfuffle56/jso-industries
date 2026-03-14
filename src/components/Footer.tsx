@@ -85,9 +85,10 @@ export default function Footer() {
                 </a>
               </li>
               <li>Westchester County, NY</li>
+              <li>Five Boroughs, NY</li>
               <li>Fairfield County, CT</li>
-              <li>New York, NY</li>
-              <li>New Jersey</li>
+              <li>Hudson County, NJ</li>
+              <li>Bergen County, NJ</li>
             </ul>
           </div>
         </div>

@@ -33,6 +33,10 @@ export const metadata: Metadata = {
     "licensed contractor",
     "general contractor New Jersey",
     "general contractor New York",
+    "Hudson County contractor",
+    "Bergen County contractor",
+    "Westchester County contractor",
+    "Five Boroughs contractor",
     "JSO Industries",
   ],
   icons: {
@@ -42,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "JSO Industries Inc.",
     description:
-      "Licensed general contractor serving Westchester County, Fairfield County, New York, and New Jersey. Commercial, residential, civil construction, construction management, renovations, and specialty trades.",
+      "Licensed general contractor serving Westchester County, Five Boroughs NY, Fairfield County, Hudson County NJ, and Bergen County NJ. Commercial, residential, civil construction, construction management, renovations, and specialty trades.",
     url: "https://jsoindustries.com",
     siteName: "JSO Industries Inc.",
     locale: "en_US",
@@ -60,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "JSO Industries Inc.",
     description:
-      "Licensed general contractor serving Westchester County, Fairfield County, New York, and New Jersey.",
+      "Licensed general contractor serving Westchester County, Five Boroughs NY, Fairfield County, Hudson County NJ, and Bergen County NJ.",
     images: ["https://jsoindustries.com/logo-company.jpeg"],
   },
 };

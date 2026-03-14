@@ -9,7 +9,7 @@ export default function CtaBanner() {
         </div>
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[0.95]">
           Let&apos;s Get to{" "}
-          <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent italic">
             Work.
           </span>
         </h2>

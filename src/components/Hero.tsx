@@ -4,28 +4,50 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
+      {/* Video background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        src="https://assets.mixkit.co/videos/4010/4010-1080.mp4"
+      />
+
+      {/* Overlays */}
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40" />
+
+      {/* Film grain */}
+      <div className="grain-overlay" aria-hidden="true" />
+
       <div className="relative z-10 text-center px-6 py-32 max-w-5xl mx-auto">
-        {/* Badge */}
-        <div className="animate-fade-in-up inline-flex items-center gap-3 mb-10">
-          <span className="w-8 h-[2px] bg-accent" />
-          <span className="text-sm font-semibold text-white/60 tracking-widest uppercase">
-            Licensed General Contractor · NY, CT & NJ
-          </span>
-          <span className="w-8 h-[2px] bg-accent" />
+        {/* Company wordmark */}
+        <div className="animate-fade-in-up mb-10">
+          <p className="text-xs font-bold text-white/30 tracking-[0.45em] uppercase mb-2">
+            Licensed General Contractor · NY, CT &amp; NJ
+          </p>
+          <p className="text-2xl md:text-3xl font-black text-white tracking-[0.25em] uppercase">
+            JSO Industries Inc.
+          </p>
         </div>
 
-        {/* Main headline */}
-        <h1 className="animate-fade-in-up text-6xl md:text-8xl lg:text-9xl font-black text-white tracking-tighter leading-[0.9]">
-          Built Right.
-          <br />
-          <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
-            Built to Last.
+        {/* Tagline */}
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.9]">
+          <span className="block animate-word-up" style={{ animationDelay: "0.1s" }}>
+            Yours to Own.
+          </span>
+          <span
+            className="block animate-word-up bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent italic"
+            style={{ animationDelay: "0.25s" }}
+          >
+            Ours to Build.
           </span>
         </h1>
 
         {/* Subheading */}
         <p className="animate-fade-in-up-delay-1 mt-10 text-lg md:text-xl text-white/45 max-w-lg mx-auto font-light leading-relaxed">
-          Licensed general contractor serving NY, CT &amp; NJ. Commercial, residential, and civil builds — no shortcuts, ever.
+          Commercial, residential, and civil builds across NY, CT and NJ. No shortcuts, ever.
         </p>
 
         {/* CTA */}

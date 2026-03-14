@@ -57,9 +57,10 @@ export default function Contact() {
                   <div className="text-xs text-white/40 uppercase tracking-wider font-medium">Serving</div>
                   <div className="text-base font-semibold text-white leading-relaxed">
                     Westchester County, NY<br />
+                    Five Boroughs, NY<br />
                     Fairfield County, CT<br />
-                    New York, NY<br />
-                    New Jersey
+                    Hudson County, NJ<br />
+                    Bergen County, NJ
                   </div>
                 </div>
               </div>
@@ -114,7 +115,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="attachment" className="block text-xs font-medium text-white/50 mb-2 uppercase tracking-wider">Attach Files <span className="normal-case text-white/30">(plans, photos, docs — optional)</span></label>
+                <label htmlFor="attachment" className="block text-xs font-medium text-white/50 mb-2 uppercase tracking-wider">Attach Files <span className="normal-case text-white/30">(plans, photos, docs, optional)</span></label>
                 <label htmlFor="attachment" className="flex items-center gap-3 w-full px-4 py-3.5 bg-white/[0.07] rounded border border-white/[0.1] hover:border-accent/50 transition-all cursor-pointer group">
                   <svg className="w-5 h-5 text-white/40 group-hover:text-accent transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />

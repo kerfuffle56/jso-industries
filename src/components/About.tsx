@@ -1,6 +1,9 @@
 export default function About() {
   return (
-    <section id="about" className="py-28 md:py-36 bg-[#0a0a0a]/95 backdrop-blur-sm border-t border-white/[0.06]">
+    <section id="about" className="py-28 md:py-36 bg-[#0a0a0a]/95 backdrop-blur-sm border-t border-white/[0.06] relative overflow-hidden">
+      <span className="absolute top-8 right-6 text-[10rem] md:text-[13rem] font-black text-white/[0.025] select-none leading-none pointer-events-none">
+        03
+      </span>
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Left Content */}
@@ -11,7 +14,7 @@ export default function About() {
             <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
               Built on
               <br />
-              <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent italic">
                 Trust
               </span>
             </h2>

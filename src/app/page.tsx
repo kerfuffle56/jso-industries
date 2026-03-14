@@ -9,10 +9,12 @@ import CtaBanner from "@/components/CtaBanner";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import VantaBackground from "@/components/VantaBackground";
+import CursorGlow from "@/components/CursorGlow";
 
 export default function Home() {
   return (
     <main>
+      <CursorGlow />
       <VantaBackground />
       <Navbar />
       <Hero />
