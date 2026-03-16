@@ -76,7 +76,7 @@ export default function Navbar() {
             href="#contact"
             className="px-6 py-2.5 rounded text-sm font-bold uppercase tracking-wide bg-accent text-white hover:bg-accent/90 shadow-md shadow-accent/20 transition-all duration-300"
           >
-            Free Estimate
+            Contact Us
           </a>
         </div>
 
@@ -112,7 +112,7 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className="bg-accent text-white text-center px-6 py-3.5 rounded text-sm font-bold uppercase tracking-wide"
               >
-                Free Estimate
+                Contact Us
               </a>
               <a
                 href="https://instagram.com/JSO_Industries"

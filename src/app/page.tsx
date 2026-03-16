@@ -21,9 +21,9 @@ export default function Home() {
       <Stats />
       <Services />
       <WhyUs />
+      <CtaBanner />
       <About />
       <Testimonials />
-      <CtaBanner />
       <Contact />
       <Footer />
     </main>

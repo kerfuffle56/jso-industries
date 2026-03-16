@@ -1,18 +1,63 @@
+"use client";
+import { useState, useEffect, useRef } from "react";
+
+const clips = [
+  {
+    src: "https://assets.mixkit.co/videos/20941/20941-720.mp4",
+    label: "Residential",
+  },
+  {
+    src: "https://assets.mixkit.co/videos/25480/25480-720.mp4",
+    label: "Commercial",
+  },
+  {
+    src: "https://assets.mixkit.co/videos/49192/49192-720.mp4",
+    label: "Civil",
+  },
+];
+
 export default function Hero() {
+  const [current, setCurrent] = useState(0);
+  const [fading, setFading] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.src = clips[current].src;
+    v.load();
+    v.play().catch(() => {});
+  }, [current]);
+
+  useEffect(() => {
+    const t = setInterval(() => {
+      setFading(true);
+      setTimeout(() => {
+        setCurrent((prev) => (prev + 1) % clips.length);
+        setFading(false);
+      }, 600);
+    }, 8000);
+    return () => clearInterval(t);
+  }, []);
+
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Video background */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-        src="https://assets.mixkit.co/videos/4010/4010-1080.mp4"
-      />
+      {/* Video */}
+      <div
+        className="absolute inset-0 transition-opacity duration-[600ms]"
+        style={{ opacity: fading ? 0 : 1 }}
+      >
+        <video
+          ref={videoRef}
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        />
+      </div>
 
       {/* Overlays */}
       <div className="absolute inset-0 bg-black/60" />
@@ -21,9 +66,32 @@ export default function Hero() {
       {/* Film grain */}
       <div className="grain-overlay" aria-hidden="true" />
 
+      {/* Progress bar */}
+      <div
+        key={current}
+        className="absolute bottom-0 left-0 h-[2px] bg-accent animate-progress z-20"
+      />
+
       <div className="relative z-10 text-center px-6 py-32 max-w-5xl mx-auto">
+        {/* Clip labels */}
+        <div className="animate-fade-in-up flex items-center justify-center gap-8 mb-10">
+          {clips.map((clip, i) => (
+            <span
+              key={clip.label}
+              className={`text-xs font-bold tracking-[0.25em] uppercase transition-all duration-500 ${
+                i === current ? "text-white" : "text-white/20"
+              }`}
+            >
+              {i === current && (
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent mr-2 align-middle" />
+              )}
+              {clip.label}
+            </span>
+          ))}
+        </div>
+
         {/* Company wordmark */}
-        <div className="animate-fade-in-up mb-10">
+        <div className="animate-fade-in-up mb-8" style={{ animationDelay: "0.05s" }}>
           <p className="text-xs font-bold text-white/30 tracking-[0.45em] uppercase mb-2">
             Licensed General Contractor · NY, CT &amp; NJ
           </p>
@@ -50,18 +118,6 @@ export default function Hero() {
           Commercial, residential, and civil builds across NY, CT and NJ. No shortcuts, ever.
         </p>
 
-        {/* CTA */}
-        <div className="animate-fade-in-up-delay-2 mt-12 flex justify-center">
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center bg-accent hover:bg-accent/90 text-white px-10 py-4 rounded text-base font-bold tracking-wide transition-all duration-300 shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/40 uppercase"
-          >
-            Get a Free Estimate
-            <svg className="w-4 h-4 ml-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
       </div>
 
       {/* Scroll indicator */}

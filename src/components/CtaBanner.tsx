@@ -14,14 +14,14 @@ export default function CtaBanner() {
           </span>
         </h2>
         <p className="mt-5 text-lg text-white/45 max-w-md mx-auto">
-          Free estimates. No pressure. Just straight answers from an experienced crew.
+          No pressure. Just straight answers from an experienced crew.
         </p>
         <div className="mt-10 flex justify-center">
           <a
             href="#contact"
             className="inline-flex items-center justify-center bg-accent hover:bg-accent/90 text-white px-10 py-4 rounded text-base font-bold tracking-wide transition-all duration-300 shadow-lg shadow-accent/30 uppercase"
           >
-            Get a Free Estimate
+            Contact Us
           </a>
         </div>
       </div>
