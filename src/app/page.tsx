@@ -7,6 +7,7 @@ import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
 import CtaBanner from "@/components/CtaBanner";
 import Contact from "@/components/Contact";
+import Process from "@/components/Process";
 import Footer from "@/components/Footer";
 import VantaBackground from "@/components/VantaBackground";
 import CursorGlow from "@/components/CursorGlow";
@@ -21,6 +22,7 @@ export default function Home() {
       <Stats />
       <About />
       <Services />
+      <Process />
       <WhyUs />
       <Testimonials />
       <Contact />

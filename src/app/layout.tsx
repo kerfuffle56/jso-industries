@@ -82,6 +82,48 @@ export default function RootLayout({
             __html: `if('scrollRestoration'in history){history.scrollRestoration='manual';}if(window.location.hash){history.replaceState(null,'',window.location.pathname);}window.scrollTo(0,0);document.addEventListener('DOMContentLoaded',function(){window.scrollTo(0,0);});`,
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": ["LocalBusiness", "GeneralContractor"],
+              "name": "JSO Industries Inc.",
+              "description": "Licensed general contractor and fully insured construction company serving NY, CT and NJ, specializing in commercial, residential, and civil construction management.",
+              "url": "https://jsoindustries.com",
+              "telephone": "+19144194449",
+              "email": "office@jsoindustries.com",
+              "logo": "https://jsoindustries.com/logo-company.jpeg",
+              "image": "https://jsoindustries.com/logo-company.jpeg",
+              "priceRange": "$$",
+              "sameAs": ["https://www.instagram.com/JSO_Industries"],
+              "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "NY",
+                "addressCountry": "US"
+              },
+              "areaServed": [
+                { "@type": "AdministrativeArea", "name": "Westchester County, NY" },
+                { "@type": "AdministrativeArea", "name": "New York City, NY" },
+                { "@type": "AdministrativeArea", "name": "Fairfield County, CT" },
+                { "@type": "AdministrativeArea", "name": "Hudson County, NJ" },
+                { "@type": "AdministrativeArea", "name": "Bergen County, NJ" }
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Construction Services",
+                "itemListElement": [
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Construction" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential Construction" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Civil Construction" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Renovations" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Construction Management" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Specialty Trades" } }
+                ]
+              }
+            }),
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
