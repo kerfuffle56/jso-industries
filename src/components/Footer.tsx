@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] backdrop-blur-sm text-white/50 py-16 border-t border-white/[0.1]">
+    <footer className="bg-[#111111] text-white/50 py-16 border-t border-white/[0.06]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -10,10 +10,10 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-5">
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-white leading-none">
-                  JSO
+                  JSO Industries
                 </span>
                 <span className="text-[0.6rem] font-semibold tracking-[0.2em] uppercase text-white/40">
-                  Industries Inc.
+                  Development &amp; Contracting
                 </span>
               </div>
             </div>
@@ -47,7 +47,7 @@ export default function Footer() {
               {[
                 { label: "Home", href: "#home" },
                 { label: "About", href: "#about" },
-                { label: "Capabilities", href: "#services" },
+                { label: "Services", href: "#services" },
                 { label: "Contact", href: "#contact" },
               ].map((link) => (
                 <li key={link.href}>
@@ -69,18 +69,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a
-                  href="tel:9144194449"
-                  className="hover:text-white transition-colors duration-200"
-                >
+                <a href="tel:9144194449" className="hover:text-white transition-colors duration-200">
                   (914) 419-4449
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:office@jsoindustries.com"
-                  className="hover:text-white transition-colors duration-200"
-                >
+                <a href="mailto:office@jsoindustries.com" className="hover:text-white transition-colors duration-200">
                   office@jsoindustries.com
                 </a>
               </li>
@@ -93,9 +87,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="mt-14 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/35">
-          <p>&copy; {new Date().getFullYear()} JSO Industries Inc.</p>
+          <p>&copy; {new Date().getFullYear()} JSO Industries. All rights reserved.</p>
           <p>NY · CT · NJ</p>
         </div>
       </div>

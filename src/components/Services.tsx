@@ -63,16 +63,16 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-28 md:py-36 bg-[#0a0a0a]/95 backdrop-blur-sm border-t border-white/[0.06] relative overflow-hidden">
-      <span className="absolute top-8 right-6 text-[10rem] md:text-[13rem] font-black text-white/[0.025] select-none leading-none pointer-events-none">
+    <section id="services" className="py-28 md:py-36 bg-[#f5f5f5] border-t border-black/[0.06] relative overflow-hidden">
+      <span className="absolute top-8 right-6 text-[10rem] md:text-[13rem] font-black text-black/[0.04] select-none leading-none pointer-events-none">
         03
       </span>
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-accent-light uppercase tracking-widest mb-3">
+          <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">
             What We Do
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
             Our Services
           </h2>
         </div>
@@ -81,18 +81,18 @@ export default function Services() {
           {services.map((service, i) => (
             <div
               key={service.title}
-              className="service-card relative bg-white/[0.06] border border-white/[0.08] rounded-2xl p-8 group animate-fade-in-up overflow-hidden"
+              className="service-card relative bg-white border border-black/[0.08] rounded-2xl p-8 group animate-fade-in-up overflow-hidden"
               style={{ animationDelay: `${i * 0.08}s` }}
             >
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="w-12 h-12 rounded-xl bg-accent/20 text-accent-light flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+              <div className="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
                 {service.icon}
               </div>
               <h3
-                className="text-lg font-bold text-white mb-2.5 group-hover:text-accent-light transition-colors duration-300"
+                className="text-lg font-bold text-gray-900 mb-2.5 group-hover:text-accent transition-colors duration-300"
                 dangerouslySetInnerHTML={{ __html: service.title }}
               />
-              <p className="text-white/70 text-sm leading-relaxed">
+              <p className="text-gray-500 text-sm leading-relaxed">
                 {service.description}
               </p>
             </div>

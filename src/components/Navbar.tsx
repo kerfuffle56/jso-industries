@@ -6,7 +6,7 @@ import Image from "next/image";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Capabilities", href: "#services" },
+  { label: "Services", href: "#services" },
   { label: "Why JSO", href: "#why-us" },
   { label: "Contact", href: "#contact" },
 ];
@@ -25,30 +25,30 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-black/90 backdrop-blur-xl border-b border-white/[0.06] shadow-lg"
-          : "bg-black/30 backdrop-blur-sm"
+          ? "bg-white/95 backdrop-blur-xl border-b border-black/[0.07] shadow-sm"
+          : "bg-black/25 backdrop-blur-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center">
         {/* Logo */}
         <a href="#home" className="flex-shrink-0 flex items-center gap-3">
           <div className="flex flex-col">
-            <span className="text-2xl lg:text-[1.7rem] font-bold tracking-tight leading-none text-white">
-              JSO
+            <span className={`text-xl lg:text-2xl font-bold tracking-tight leading-none transition-colors duration-300 ${scrolled ? "text-gray-900" : "text-white"}`}>
+              JSO Industries
             </span>
-            <span className="text-[0.6rem] lg:text-[0.65rem] font-semibold tracking-[0.2em] uppercase text-white/40">
+            <span className={`text-[0.6rem] lg:text-[0.65rem] font-semibold tracking-[0.2em] uppercase transition-colors duration-300 ${scrolled ? "text-gray-400" : "text-white/40"}`}>
               Development &amp; Contracting
             </span>
           </div>
         </a>
 
-        {/* Desktop Nav - Absolute centered */}
+        {/* Desktop Nav */}
         <div className="hidden lg:flex items-center justify-center gap-10 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-base font-medium tracking-wide text-white/70 hover:text-white transition-colors duration-200"
+              className={`text-base font-medium tracking-wide transition-colors duration-200 hover:text-accent ${scrolled ? "text-gray-600 hover:text-accent" : "text-white/70 hover:text-white"}`}
             >
               {link.label}
             </a>
@@ -86,27 +86,27 @@ export default function Navbar() {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          <span className={`w-6 h-0.5 rounded-full bg-white transition-all duration-300 ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`w-6 h-0.5 rounded-full bg-white transition-all duration-300 ${mobileOpen ? "opacity-0" : ""}`} />
-          <span className={`w-6 h-0.5 rounded-full bg-white transition-all duration-300 ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          <span className={`w-6 h-0.5 rounded-full transition-all duration-300 ${scrolled ? "bg-gray-900" : "bg-white"} ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`w-6 h-0.5 rounded-full transition-all duration-300 ${scrolled ? "bg-gray-900" : "bg-white"} ${mobileOpen ? "opacity-0" : ""}`} />
+          <span className={`w-6 h-0.5 rounded-full transition-all duration-300 ${scrolled ? "bg-gray-900" : "bg-white"} ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
         </button>
       </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-white/[0.06]">
+        <div className="lg:hidden bg-white/98 backdrop-blur-xl border-t border-black/[0.06]">
           <div className="flex flex-col px-6 py-6 gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-base text-white/70 font-medium hover:text-white transition-colors py-1"
+                className="text-base text-gray-700 font-medium hover:text-accent transition-colors py-1"
               >
                 {link.label}
               </a>
             ))}
-            <div className="pt-4 border-t border-white/[0.08] flex flex-col gap-3">
+            <div className="pt-4 border-t border-black/[0.06] flex flex-col gap-3">
               <a
                 href="#contact"
                 onClick={() => setMobileOpen(false)}
@@ -118,7 +118,7 @@ export default function Navbar() {
                 href="https://instagram.com/JSO_Industries"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 text-sm text-white/50 font-medium hover:text-white transition-colors"
+                className="flex items-center justify-center gap-2 text-sm text-gray-500 font-medium hover:text-accent transition-colors"
               >
                 <Image
                   src="/logo-instagram.png"
