@@ -103,13 +103,16 @@ export default function Hero() {
         {/* Tagline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.9]">
           <span className="block animate-word-up" style={{ animationDelay: "0.1s" }}>
-            We Develop.
+            Develop.
+          </span>
+          <span className="block animate-word-up" style={{ animationDelay: "0.2s" }}>
+            Build.
           </span>
           <span
             className="block animate-word-up bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent italic"
-            style={{ animationDelay: "0.25s" }}
+            style={{ animationDelay: "0.32s" }}
           >
-            We Build.
+            Own.
           </span>
         </h1>
 
