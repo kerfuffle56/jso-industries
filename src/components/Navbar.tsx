@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Why Us", href: "#why-us" },
   { label: "About", href: "#about" },
+  { label: "Capabilities", href: "#services" },
+  { label: "Why JSO", href: "#why-us" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -37,7 +37,7 @@ export default function Navbar() {
               JSO
             </span>
             <span className="text-[0.6rem] lg:text-[0.65rem] font-semibold tracking-[0.2em] uppercase text-white/40">
-              Industries Inc.
+              Development &amp; Construction
             </span>
           </div>
         </a>

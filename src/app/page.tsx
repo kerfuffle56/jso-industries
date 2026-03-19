@@ -1,13 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
-import Services from "@/components/Services";
-import WhyUs from "@/components/WhyUs";
 import About from "@/components/About";
-import Testimonials from "@/components/Testimonials";
+import Services from "@/components/Services";
+import Process from "@/components/Process";
+import WhyUs from "@/components/WhyUs";
 import CtaBanner from "@/components/CtaBanner";
 import Contact from "@/components/Contact";
-import Process from "@/components/Process";
 import Footer from "@/components/Footer";
 import VantaBackground from "@/components/VantaBackground";
 import CursorGlow from "@/components/CursorGlow";
@@ -24,7 +23,7 @@ export default function Home() {
       <Services />
       <Process />
       <WhyUs />
-      <Testimonials />
+      <CtaBanner />
       <Contact />
       <Footer />
     </main>

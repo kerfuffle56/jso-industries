@@ -12,7 +12,7 @@ const clips = [
   },
   {
     src: "https://assets.mixkit.co/videos/49192/49192-720.mp4",
-    label: "Civil",
+    label: "Mixed-Use",
   },
 ];
 
@@ -93,7 +93,7 @@ export default function Hero() {
         {/* Company wordmark */}
         <div className="animate-fade-in-up mb-8" style={{ animationDelay: "0.05s" }}>
           <p className="text-xs font-bold text-white/30 tracking-[0.45em] uppercase mb-2">
-            Licensed General Contractor · NY, CT &amp; NJ
+            Real Estate Development · Self-Performing GC · NY, CT &amp; NJ
           </p>
           <p className="text-2xl md:text-3xl font-black text-white tracking-[0.25em] uppercase">
             JSO Industries Inc.
@@ -103,21 +103,20 @@ export default function Hero() {
         {/* Tagline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.9]">
           <span className="block animate-word-up" style={{ animationDelay: "0.1s" }}>
-            Yours to Own.
+            We Develop.
           </span>
           <span
             className="block animate-word-up bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent italic"
             style={{ animationDelay: "0.25s" }}
           >
-            Ours to Build.
+            We Build.
           </span>
         </h1>
 
         {/* Subheading */}
-        <p className="animate-fade-in-up-delay-1 mt-10 text-lg md:text-xl text-white/45 max-w-lg mx-auto font-light leading-relaxed">
-          Commercial, residential, and civil builds across NY, CT and NJ. No shortcuts, ever.
+        <p className="animate-fade-in-up-delay-1 mt-10 text-lg md:text-xl text-white/45 max-w-xl mx-auto font-light leading-relaxed">
+          We acquire, entitle, and build our own projects — and bring that same developer&apos;s eye to yours.
         </p>
-
       </div>
 
       {/* Scroll indicator */}

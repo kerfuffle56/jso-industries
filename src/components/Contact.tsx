@@ -16,8 +16,8 @@ export default function Contact() {
               </span>
             </h2>
             <p className="mt-8 text-base text-white/50 leading-relaxed">
-              Ready to start your next project? Get in touch for a free
-              estimate.
+              Have a site, an opportunity, or a project? We&apos;d love to hear about it.
+              No pressure — just a straight conversation.
             </p>
 
             {/* Contact Info */}
@@ -96,15 +96,15 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-xs font-medium text-white/50 mb-2 uppercase tracking-wider">Service</label>
+                <label htmlFor="service" className="block text-xs font-medium text-white/50 mb-2 uppercase tracking-wider">Inquiry Type</label>
                 <select id="service" name="service" className="w-full px-4 py-3.5 bg-white/[0.07] rounded border border-white/[0.1] focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-white text-sm">
-                  <option value="" className="bg-[#1a1a1a]">Select a service...</option>
-                  <option value="commercial" className="bg-[#1a1a1a]">Commercial Construction</option>
-                  <option value="residential" className="bg-[#1a1a1a]">Residential Construction</option>
-                  <option value="renovations" className="bg-[#1a1a1a]">Renovations</option>
-                  <option value="civil" className="bg-[#1a1a1a]">Civil Construction</option>
-                  <option value="construction-management" className="bg-[#1a1a1a]">Construction Management</option>
-                  <option value="specialty-trades" className="bg-[#1a1a1a]">Specialty Trades</option>
+                  <option value="" className="bg-[#1a1a1a]">Select an inquiry type...</option>
+                  <option value="real-estate-development" className="bg-[#1a1a1a]">Real Estate Development</option>
+                  <option value="ground-up-construction" className="bg-[#1a1a1a]">Ground-Up Construction</option>
+                  <option value="commercial-construction" className="bg-[#1a1a1a]">Commercial Construction</option>
+                  <option value="residential-construction" className="bg-[#1a1a1a]">Residential Construction</option>
+                  <option value="renovation-value-add" className="bg-[#1a1a1a]">Renovation &amp; Value-Add</option>
+                  <option value="project-management" className="bg-[#1a1a1a]">Project Management</option>
                   <option value="other" className="bg-[#1a1a1a]">Other</option>
                 </select>
               </div>
@@ -115,7 +115,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="attachment" className="block text-xs font-medium text-white/50 mb-2 uppercase tracking-wider">Attach Files <span className="normal-case text-white/30">(plans, photos, docs, optional)</span></label>
+                <label htmlFor="attachment" className="block text-xs font-medium text-white/50 mb-2 uppercase tracking-wider">Attach Files <span className="normal-case text-white/30">(plans, surveys, docs, optional)</span></label>
                 <label htmlFor="attachment" className="flex items-center gap-3 w-full px-4 py-3.5 bg-white/[0.07] rounded border border-white/[0.1] hover:border-accent/50 transition-all cursor-pointer group">
                   <svg className="w-5 h-5 text-white/40 group-hover:text-accent transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />

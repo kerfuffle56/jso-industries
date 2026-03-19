@@ -1,27 +1,27 @@
 const steps = [
   {
     number: "01",
-    title: "Consultation",
+    title: "Site & Opportunity",
     description:
-      "Tell us about your project. We schedule a site visit, ask the right questions, and get a clear picture of what you need.",
+      "We identify and underwrite development opportunities — site visits, feasibility analysis, market study, and acquisition strategy.",
   },
   {
     number: "02",
-    title: "Proposal",
+    title: "Entitlements & Design",
     description:
-      "You get a detailed scope of work, an honest timeline, and a lump sum number. No surprises, no change order games.",
+      "We navigate permitting, municipal approvals, zoning, and design development. We know this process from the inside out.",
   },
   {
     number: "03",
-    title: "Build",
+    title: "Construction",
     description:
-      "We manage the job from permits to punch list. Our crew is on site every day. You get progress updates, not headaches.",
+      "We self-perform the build. Our crews, our schedule, our quality standards. No GC markup layer, no finger-pointing between developer and contractor.",
   },
   {
     number: "04",
-    title: "Handoff",
+    title: "Delivery & Value",
     description:
-      "Final walkthrough, everything done right. Your project is complete and built the way it was supposed to be.",
+      "Certificate of occupancy, lease-up, or sale. We see every project through to realized value — not just substantial completion.",
   },
 ];
 
@@ -29,13 +29,13 @@ export default function Process() {
   return (
     <section className="py-28 md:py-36 bg-[#0a0a0a]/95 backdrop-blur-sm border-t border-white/[0.06] relative overflow-hidden">
       <span className="absolute top-8 right-6 text-[10rem] md:text-[13rem] font-black text-white/[0.025] select-none leading-none pointer-events-none">
-        02
+        04
       </span>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-accent-light uppercase tracking-widest mb-3">
-            How It Works
+            How We Develop
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
             The Process

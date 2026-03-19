@@ -2,10 +2,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: "100+", label: "Projects Completed" },
-  { value: "15+", label: "Years Experience" },
+  { value: "10+", label: "Years in Construction" },
+  { value: "100+", label: "Projects Delivered" },
   { value: "3", label: "States Licensed" },
-  { value: "100%", label: "Fully Insured" },
+  { value: "100%", label: "Self-Performing" },
 ];
 
 function CountUp({ value }: { value: string }) {
