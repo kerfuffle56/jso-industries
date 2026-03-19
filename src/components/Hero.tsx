@@ -18,50 +18,87 @@ const clips = [
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
-  const [fading, setFading] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const [activeSlot, setActiveSlot] = useState<0 | 1>(0);
+  const [crossfading, setCrossfading] = useState(false);
+  const videoA = useRef<HTMLVideoElement>(null);
+  const videoB = useRef<HTMLVideoElement>(null);
 
+  // Initial load: A plays clip 0, B silently preloads clip 1
   useEffect(() => {
-    const v = videoRef.current;
-    if (!v) return;
-    v.src = clips[current].src;
-    v.load();
-    v.play().catch(() => {});
-  }, [current]);
+    if (videoA.current) {
+      videoA.current.src = clips[0].src;
+      videoA.current.load();
+      videoA.current.play().catch(() => {});
+    }
+    if (videoB.current) {
+      videoB.current.src = clips[1 % clips.length].src;
+      videoB.current.load();
+    }
+  }, []);
 
+  // Cycle every 8s with crossfade
   useEffect(() => {
     const t = setInterval(() => {
-      setFading(true);
+      const nextIndex = (current + 1) % clips.length;
+      const nextSlot = activeSlot === 0 ? 1 : 0;
+      const nextVideo = nextSlot === 0 ? videoA.current : videoB.current;
+      const prevVideo = activeSlot === 0 ? videoA.current : videoB.current;
+
+      // Play the preloaded next video
+      if (nextVideo) nextVideo.play().catch(() => {});
+
+      setCrossfading(true);
+
       setTimeout(() => {
-        setCurrent((prev) => (prev + 1) % clips.length);
-        setFading(false);
-      }, 600);
+        setActiveSlot(nextSlot as 0 | 1);
+        setCurrent(nextIndex);
+        setCrossfading(false);
+
+        // Preload the clip after next into the now-background slot
+        const afterNextIndex = (nextIndex + 1) % clips.length;
+        if (prevVideo) {
+          prevVideo.src = clips[afterNextIndex].src;
+          prevVideo.load();
+        }
+      }, 900);
     }, 8000);
+
     return () => clearInterval(t);
-  }, []);
+  }, [current, activeSlot]);
+
+  // Opacity: active slot = 1, background slot = 0; swap during crossfade
+  const opacityA = crossfading
+    ? (activeSlot === 0 ? 0 : 1)
+    : (activeSlot === 0 ? 1 : 0);
+
+  const opacityB = crossfading
+    ? (activeSlot === 1 ? 0 : 1)
+    : (activeSlot === 1 ? 1 : 0);
 
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Video */}
+      {/* Video slot A */}
       <div
-        className="absolute inset-0 transition-opacity duration-[600ms]"
-        style={{ opacity: fading ? 0 : 1 }}
+        className="absolute inset-0 transition-opacity duration-[900ms] ease-in-out"
+        style={{ opacity: opacityA }}
       >
-        <video
-          ref={videoRef}
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-        />
+        <video ref={videoA} muted loop playsInline className="w-full h-full object-cover" />
+      </div>
+
+      {/* Video slot B */}
+      <div
+        className="absolute inset-0 transition-opacity duration-[900ms] ease-in-out"
+        style={{ opacity: opacityB }}
+      >
+        <video ref={videoB} muted loop playsInline className="w-full h-full object-cover" />
       </div>
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/40" />
+      <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/35" />
 
       {/* Film grain */}
       <div className="grain-overlay" aria-hidden="true" />
@@ -78,7 +115,7 @@ export default function Hero() {
           {clips.map((clip, i) => (
             <span
               key={clip.label}
-              className={`text-xs font-bold tracking-[0.25em] uppercase transition-all duration-500 ${
+              className={`text-xs font-bold tracking-[0.25em] uppercase transition-all duration-700 ${
                 i === current ? "text-white" : "text-white/20"
               }`}
             >
@@ -96,7 +133,7 @@ export default function Hero() {
             Real Estate Development &amp; General Contracting · NY, CT &amp; NJ
           </p>
           <p className="text-2xl md:text-3xl font-black text-white tracking-[0.25em] uppercase">
-            JSO Industries Inc.
+            JSO Industries
           </p>
         </div>
 
@@ -109,7 +146,7 @@ export default function Hero() {
             Build.
           </span>
           <span
-            className="block animate-word-up bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent italic"
+            className="block animate-word-up bg-gradient-to-r from-accent to-red-400 bg-clip-text text-transparent italic"
             style={{ animationDelay: "0.32s" }}
           >
             Own.

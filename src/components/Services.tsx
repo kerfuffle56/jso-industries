@@ -63,7 +63,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-28 md:py-36 bg-[#f5f5f5] border-t border-black/[0.06] relative overflow-hidden">
+    <section id="services" className="py-28 md:py-36 bg-[#e8e8e8] border-t border-black/[0.06] relative overflow-hidden">
       <span className="absolute top-8 right-6 text-[10rem] md:text-[13rem] font-black text-black/[0.04] select-none leading-none pointer-events-none">
         03
       </span>
