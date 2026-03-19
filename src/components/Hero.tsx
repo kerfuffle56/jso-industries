@@ -3,15 +3,15 @@ import { useState, useEffect, useRef } from "react";
 
 const clips = [
   {
-    src: "https://assets.mixkit.co/videos/4170/4170-720.mp4",
+    src: "https://assets.mixkit.co/videos/49806/49806-720.mp4",
     label: "Development",
   },
   {
-    src: "https://assets.mixkit.co/videos/49845/49845-720.mp4",
+    src: "https://assets.mixkit.co/videos/4352/4352-720.mp4",
     label: "Architecture",
   },
   {
-    src: "https://assets.mixkit.co/videos/4046/4046-720.mp4",
+    src: "https://assets.mixkit.co/videos/4196/4196-720.mp4",
     label: "Interiors",
   },
 ];
