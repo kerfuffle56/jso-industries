@@ -51,7 +51,7 @@ export default function About() {
               { value: "10+", label: "Years in Construction" },
               { value: "B.S.", label: "Business · Fairfield University" },
               { value: "GC", label: "Self-Performing General Contractor" },
-              { value: "NY · CT · NJ", label: "Licensed &amp; Fully Insured" },
+              { value: "NY · CT · NJ", label: "Tri-State Operations" },
             ].map((item) => (
               <div
                 key={item.label}

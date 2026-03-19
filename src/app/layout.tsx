@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "JSO Industries | Development & Contracting | NY, CT & NJ",
+  title: "JSO Industries | Real Estate Development & General Contracting",
   description:
     "JSO Industries is a real estate development and contracting firm serving NY, CT and NJ. We acquire, entitle, and build our own projects — and bring that same developer's eye to yours.",
   keywords: [
@@ -83,9 +83,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": ["LocalBusiness", "GeneralContractor"],
-              "name": "JSO Industries Inc.",
-              "description": "Licensed general contractor and fully insured construction company serving NY, CT and NJ, specializing in commercial, residential, and civil construction management.",
+              "@type": ["LocalBusiness", "RealEstateAgent"],
+              "name": "JSO Industries",
+              "description": "Real estate development and general contracting firm serving NY, CT and NJ.",
               "url": "https://jsoindustries.com",
               "telephone": "+19144194449",
               "email": "office@jsoindustries.com",
@@ -107,14 +107,14 @@ export default function RootLayout({
               ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                "name": "Construction Services",
+                "name": "Services",
                 "itemListElement": [
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Construction" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential Construction" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Civil Construction" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Renovations" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Construction Management" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Specialty Trades" } }
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Real Estate Development" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "General Contracting" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Property Management" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Project Management" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Buildouts" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential Construction" } }
                 ]
               }
             }),

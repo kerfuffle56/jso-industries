@@ -18,8 +18,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm leading-relaxed max-w-sm">
-              Real estate development and self-performing general contracting
-              across New York, Connecticut, and New Jersey.
+              Real estate development and general contracting across
+              New York, Connecticut, and New Jersey.
             </p>
             <a
               href="https://instagram.com/JSO_Industries"
@@ -96,7 +96,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-14 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/35">
           <p>&copy; {new Date().getFullYear()} JSO Industries Inc.</p>
-          <p>Licensed &amp; Fully Insured · NY, CT &amp; NJ</p>
+          <p>NY · CT · NJ</p>
         </div>
       </div>
     </footer>

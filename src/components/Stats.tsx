@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 const stats = [
   { value: "10+", label: "Years in Construction" },
   { value: "100+", label: "Projects Delivered" },
-  { value: "3", label: "States Licensed" },
-  { value: "100%", label: "Self-Performing" },
+  { value: "3", label: "States Operating" },
+  { value: "1", label: "Point of Contact" },
 ];
 
 function CountUp({ value }: { value: string }) {
