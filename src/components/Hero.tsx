@@ -3,16 +3,16 @@ import { useState, useEffect, useRef } from "react";
 
 const clips = [
   {
-    src: "https://assets.mixkit.co/videos/20941/20941-720.mp4",
-    label: "Residential",
+    src: "https://assets.mixkit.co/videos/4170/4170-720.mp4",
+    label: "Development",
   },
   {
-    src: "https://assets.mixkit.co/videos/25480/25480-720.mp4",
-    label: "Commercial",
+    src: "https://assets.mixkit.co/videos/49845/49845-720.mp4",
+    label: "Architecture",
   },
   {
-    src: "https://assets.mixkit.co/videos/49192/49192-720.mp4",
-    label: "Mixed-Use",
+    src: "https://assets.mixkit.co/videos/4046/4046-720.mp4",
+    label: "Interiors",
   },
 ];
 
@@ -93,7 +93,7 @@ export default function Hero() {
         {/* Company wordmark */}
         <div className="animate-fade-in-up mb-8" style={{ animationDelay: "0.05s" }}>
           <p className="text-xs font-bold text-white/30 tracking-[0.45em] uppercase mb-2">
-            Real Estate Development · Self-Performing GC · NY, CT &amp; NJ
+            Real Estate Development &amp; Contracting · NY, CT &amp; NJ
           </p>
           <p className="text-2xl md:text-3xl font-black text-white tracking-[0.25em] uppercase">
             JSO Industries Inc.

@@ -37,7 +37,7 @@ export default function Navbar() {
               JSO
             </span>
             <span className="text-[0.6rem] lg:text-[0.65rem] font-semibold tracking-[0.2em] uppercase text-white/40">
-              Development &amp; Construction
+              Development &amp; Contracting
             </span>
           </div>
         </a>
