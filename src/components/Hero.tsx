@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 
 const clips = [
   {
-    src: "https://assets.mixkit.co/videos/30544/30544-720.mp4",
+    src: "https://assets.mixkit.co/videos/9686/9686-720.mp4",
     label: "Development",
   },
   {
