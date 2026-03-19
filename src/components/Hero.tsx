@@ -7,7 +7,7 @@ const clips = [
     label: "Development",
   },
   {
-    src: "https://assets.mixkit.co/videos/4442/4442-720.mp4",
+    src: "https://assets.mixkit.co/videos/31086/31086-720.mp4",
     label: "Commercial",
   },
   {
