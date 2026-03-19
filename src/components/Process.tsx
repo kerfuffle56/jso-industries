@@ -28,9 +28,6 @@ const steps = [
 export default function Process() {
   return (
     <section className="py-28 md:py-36 bg-[#e8e8e8] border-t border-black/[0.06] relative overflow-hidden">
-      <span className="absolute top-8 right-6 text-[10rem] md:text-[13rem] font-black text-black/[0.04] select-none leading-none pointer-events-none">
-        04
-      </span>
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">
