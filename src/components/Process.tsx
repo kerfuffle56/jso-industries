@@ -3,7 +3,7 @@ const steps = [
     number: "01",
     title: "Site & Opportunity",
     description:
-      "We identify and underwrite development opportunities — site visits, feasibility analysis, market study, and acquisition strategy.",
+      "We identify and underwrite development opportunities. Site visits, feasibility analysis, market study, and acquisition strategy.",
   },
   {
     number: "02",
@@ -21,7 +21,7 @@ const steps = [
     number: "04",
     title: "Delivery & Value",
     description:
-      "Certificate of occupancy, lease-up, or sale. We see every project through to realized value — not just substantial completion.",
+      "Certificate of occupancy, lease-up, or sale. We see every project through to realized value, not just substantial completion.",
   },
 ];
 
@@ -50,14 +50,13 @@ export default function Process() {
               className="relative p-8 border-t-2 border-white/[0.06] hover:border-accent transition-colors duration-300 group animate-fade-in-up"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
-              {/* Step number */}
               <p className="text-5xl font-black text-accent/20 group-hover:text-accent/40 transition-colors duration-300 leading-none mb-6">
                 {step.number}
               </p>
               <h3 className="text-lg font-bold text-white mb-3">
                 {step.title}
               </h3>
-              <p className="text-white/45 text-sm leading-relaxed">
+              <p className="text-white/65 text-sm leading-relaxed">
                 {step.description}
               </p>
             </div>

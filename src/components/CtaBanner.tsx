@@ -14,7 +14,7 @@ export default function CtaBanner() {
           </span>
         </h2>
         <p className="mt-5 text-lg text-white/45 max-w-lg mx-auto">
-          Whether you&apos;re a landowner, investor, or need a builder with a developer&apos;s mind — let&apos;s talk.
+          Whether you&apos;re a landowner, investor, or need a builder with a developer&apos;s mind, let&apos;s talk.
         </p>
         <div className="mt-10 flex justify-center">
           <a

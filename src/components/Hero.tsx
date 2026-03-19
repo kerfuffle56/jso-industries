@@ -115,7 +115,7 @@ export default function Hero() {
 
         {/* Subheading */}
         <p className="animate-fade-in-up-delay-1 mt-10 text-lg md:text-xl text-white/45 max-w-xl mx-auto font-light leading-relaxed">
-          We acquire, entitle, and build our own projects — and bring that same developer&apos;s eye to yours.
+          We acquire, entitle, and build our own projects. We bring that same developer&apos;s eye to yours.
         </p>
       </div>
 

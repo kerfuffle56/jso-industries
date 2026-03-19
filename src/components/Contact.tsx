@@ -15,9 +15,9 @@ export default function Contact() {
                 Talk
               </span>
             </h2>
-            <p className="mt-8 text-base text-white/50 leading-relaxed">
+            <p className="mt-8 text-base text-white/70 leading-relaxed">
               Have a site, an opportunity, or a project? We&apos;d love to hear about it.
-              No pressure — just a straight conversation.
+              No pressure. Just a straight conversation.
             </p>
 
             {/* Contact Info */}

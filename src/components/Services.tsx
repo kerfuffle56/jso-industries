@@ -3,7 +3,7 @@ const services = [
   {
     title: "Real Estate Development",
     description:
-      "We act as developer and GC on our own projects — acquiring sites, navigating entitlements, and delivering from the ground up.",
+      "We act as developer and GC on our own projects, acquiring sites, navigating entitlements, and delivering from the ground up.",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
@@ -13,7 +13,7 @@ const services = [
   {
     title: "Ground-Up Construction",
     description:
-      "Self-performing general contracting for commercial and residential new builds. No markup layer — our crews, our standards.",
+      "Self-performing general contracting for commercial and residential new builds. No markup layer. Our crews, our standards.",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
@@ -33,7 +33,7 @@ const services = [
   {
     title: "Residential Construction",
     description:
-      "Custom homes, multi-family, and new residential builds with precision craftsmanship and developer-level attention.",
+      "Custom homes, multi-family, and new residential builds with precision craftsmanship and a developer's attention to detail.",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 12 8.954-8.955a1.126 1.126 0 0 1 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
@@ -43,7 +43,7 @@ const services = [
   {
     title: "Renovation &amp; Value-Add",
     description:
-      "Repositioning existing assets through strategic renovation. We understand what improvements drive returns.",
+      "Repositioning existing assets through strategic renovation. We understand what improvements drive the most returns.",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
@@ -95,7 +95,7 @@ export default function Services() {
                 className="text-lg font-bold text-white mb-2.5 group-hover:text-accent-light transition-colors duration-300"
                 dangerouslySetInnerHTML={{ __html: service.title }}
               />
-              <p className="text-white/55 text-[0.925rem] leading-relaxed">
+              <p className="text-white/70 text-sm leading-relaxed">
                 {service.description}
               </p>
             </div>
