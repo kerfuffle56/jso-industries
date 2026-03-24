@@ -5,14 +5,20 @@ const clips = [
   {
     src: "https://assets.mixkit.co/videos/9686/9686-720.mp4",
     label: "Development",
+    loop: true,
+    duration: 8000,
   },
   {
-    src: "https://assets.mixkit.co/videos/31086/31086-720.mp4",
+    src: "https://assets.mixkit.co/videos/40718/40718-720.mp4",
     label: "Commercial",
+    loop: true,
+    duration: 8000,
   },
   {
-    src: "https://assets.mixkit.co/videos/48394/48394-720.mp4",
+    src: "https://assets.mixkit.co/videos/20941/20941-720.mp4",
     label: "Residential",
+    loop: true,
+    duration: 8000,
   },
 ];
 
@@ -26,19 +32,21 @@ export default function Hero() {
   // Initial load: A plays clip 0, B silently preloads clip 1
   useEffect(() => {
     if (videoA.current) {
+      videoA.current.loop = clips[0].loop;
       videoA.current.src = clips[0].src;
       videoA.current.load();
       videoA.current.play().catch(() => {});
     }
     if (videoB.current) {
+      videoB.current.loop = clips[1 % clips.length].loop;
       videoB.current.src = clips[1 % clips.length].src;
       videoB.current.load();
     }
   }, []);
 
-  // Cycle every 8s with crossfade
+  // Cycle after each clip's duration with crossfade
   useEffect(() => {
-    const t = setInterval(() => {
+    const t = setTimeout(() => {
       const nextIndex = (current + 1) % clips.length;
       const nextSlot = activeSlot === 0 ? 1 : 0;
       const nextVideo = nextSlot === 0 ? videoA.current : videoB.current;
@@ -57,13 +65,14 @@ export default function Hero() {
         // Preload the clip after next into the now-background slot
         const afterNextIndex = (nextIndex + 1) % clips.length;
         if (prevVideo) {
+          prevVideo.loop = clips[afterNextIndex].loop;
           prevVideo.src = clips[afterNextIndex].src;
           prevVideo.load();
         }
       }, 900);
-    }, 8000);
+    }, clips[current].duration);
 
-    return () => clearInterval(t);
+    return () => clearTimeout(t);
   }, [current, activeSlot]);
 
   // Opacity: active slot = 1, background slot = 0; swap during crossfade
@@ -85,7 +94,7 @@ export default function Hero() {
         className="absolute inset-0 transition-opacity duration-[900ms] ease-in-out"
         style={{ opacity: opacityA }}
       >
-        <video ref={videoA} muted loop playsInline className="w-full h-full object-cover" />
+        <video ref={videoA} muted playsInline className="w-full h-full object-cover" />
       </div>
 
       {/* Video slot B */}
@@ -93,7 +102,7 @@ export default function Hero() {
         className="absolute inset-0 transition-opacity duration-[900ms] ease-in-out"
         style={{ opacity: opacityB }}
       >
-        <video ref={videoB} muted loop playsInline className="w-full h-full object-cover" />
+        <video ref={videoB} muted playsInline className="w-full h-full object-cover" />
       </div>
 
       {/* Overlays */}
@@ -107,15 +116,16 @@ export default function Hero() {
       <div
         key={current}
         className="absolute bottom-0 left-0 h-[2px] bg-accent animate-progress z-20"
+        style={{ animationDuration: `${clips[current].duration}ms` }}
       />
 
-      <div className="relative z-10 text-center px-6 py-32 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-6 py-20 md:py-32 max-w-5xl mx-auto">
         {/* Clip labels */}
-        <div className="animate-fade-in-up flex items-center justify-center gap-8 mb-10">
+        <div className="animate-fade-in-up flex items-center justify-center gap-3 sm:gap-6 md:gap-8 mb-6 md:mb-10">
           {clips.map((clip, i) => (
             <span
               key={clip.label}
-              className={`text-xs font-bold tracking-[0.25em] uppercase transition-all duration-700 ${
+              className={`text-[0.65rem] sm:text-xs font-bold tracking-[0.12em] sm:tracking-[0.25em] uppercase transition-all duration-700 ${
                 i === current ? "text-white" : "text-white/20"
               }`}
             >
@@ -128,17 +138,20 @@ export default function Hero() {
         </div>
 
         {/* Company wordmark */}
-        <div className="animate-fade-in-up mb-8" style={{ animationDelay: "0.05s" }}>
-          <p className="text-xs font-bold text-white/30 tracking-[0.45em] uppercase mb-2">
+        <div className="animate-fade-in-up mb-6 md:mb-8" style={{ animationDelay: "0.05s" }}>
+          <p className="hidden sm:block text-xs font-bold text-white/50 tracking-[0.35em] uppercase mb-3">
             Real Estate Development &amp; General Contracting · NY, CT &amp; NJ
           </p>
-          <p className="text-2xl md:text-3xl font-black text-white tracking-[0.25em] uppercase">
+          <p
+            className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-[0.12em] sm:tracking-[0.2em] uppercase"
+            style={{ textShadow: "0 2px 24px rgba(0,0,0,0.9), 0 0 60px rgba(0,0,0,0.6)" }}
+          >
             JSO Industries
           </p>
         </div>
 
         {/* Tagline */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.9]">
+        <h1 className="text-4xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[0.9]">
           <span className="block animate-word-up" style={{ animationDelay: "0.1s" }}>
             Develop.
           </span>
@@ -154,7 +167,7 @@ export default function Hero() {
         </h1>
 
         {/* Subheading */}
-        <p className="animate-fade-in-up-delay-1 mt-10 text-lg md:text-xl text-white/45 max-w-xl mx-auto font-light leading-relaxed">
+        <p className="animate-fade-in-up-delay-1 mt-6 md:mt-10 text-base md:text-xl text-white/45 max-w-xl mx-auto font-light leading-relaxed">
           We acquire, entitle, and build our own projects. We bring that same developer&apos;s eye to yours.
         </p>
       </div>

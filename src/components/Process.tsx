@@ -27,13 +27,13 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="py-28 md:py-36 bg-[#e8e8e8] border-t border-black/[0.06] relative overflow-hidden">
+    <section className="py-28 md:py-36 bg-[#111111] border-t border-white/[0.06] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">
             How We Develop
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
             The Process
           </h2>
         </div>
@@ -42,16 +42,16 @@ export default function Process() {
           {steps.map((step, i) => (
             <div
               key={step.number}
-              className="relative p-8 border-t-2 border-black/[0.08] hover:border-accent transition-colors duration-300 group animate-fade-in-up"
+              className="relative p-8 border-t-2 border-white/[0.08] hover:border-accent transition-colors duration-300 group animate-fade-in-up"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <p className="text-5xl font-black text-accent/20 group-hover:text-accent/40 transition-colors duration-300 leading-none mb-6">
                 {step.number}
               </p>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
+              <h3 className="text-lg font-bold text-white mb-3">
                 {step.title}
               </h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
+              <p className="text-white/45 text-sm leading-relaxed">
                 {step.description}
               </p>
             </div>

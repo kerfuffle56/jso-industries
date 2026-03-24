@@ -7,7 +7,7 @@ export default function CtaBanner() {
           <span className="text-xs font-semibold text-white/50 tracking-widest uppercase">Ready to Develop</span>
           <span className="w-8 h-[2px] bg-accent" />
         </div>
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[0.95]">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[0.95]">
           Have a Site or{" "}
           <span className="bg-gradient-to-r from-accent to-red-400 bg-clip-text text-transparent italic">
             Opportunity?

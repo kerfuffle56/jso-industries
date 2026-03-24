@@ -74,15 +74,15 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:office@jsoindustries.com" className="hover:text-white transition-colors duration-200">
+                <a href="mailto:office@jsoindustries.com" className="hover:text-white transition-colors duration-200 break-all">
                   office@jsoindustries.com
                 </a>
               </li>
-              <li>Westchester County, NY</li>
-              <li>Five Boroughs, NY</li>
-              <li>Fairfield County, CT</li>
-              <li>Hudson County, NJ</li>
               <li>Bergen County, NJ</li>
+              <li>Fairfield County, CT</li>
+              <li>Five Boroughs, NY</li>
+              <li>Hudson County, NJ</li>
+              <li>Westchester County, NY</li>
             </ul>
           </div>
         </div>

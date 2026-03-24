@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xxd:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx wrangler deploy:*)",
+      "Bash(/Users/jonoronzio/jso-industries/src/app/globals.css:*)",
+      "Bash(/Users/jonoronzio/jso-industries/src/components/Hero.tsx:*)",
+      "Bash(python3:*)",
+      "Bash(npm install:*)",
+      "Bash(npm i:*)",
+      "Bash(node -e:*)",
+      "Bash(tr:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "WebSearch",
+      "WebFetch(domain:openasset.com)",
+      "WebFetch(domain:www.sitebuilderreport.com)",
+      "WebFetch(domain:contractorgorilla.com)",
+      "Bash(git -C /Users/jonoronzio/jso-industries status)",
+      "Bash(git -C /Users/jonoronzio/jso-industries log --oneline -5)",
+      "Bash(git -C /Users/jonoronzio/jso-industries add src/app/globals.css src/app/layout.tsx src/app/page.tsx src/app/thank-you/page.tsx src/components/About.tsx src/components/Contact.tsx src/components/CtaBanner.tsx src/components/Footer.tsx src/components/Hero.tsx src/components/Navbar.tsx src/components/Services.tsx src/components/VantaBackground.tsx src/components/WhyUs.tsx src/components/Stats.tsx src/components/Testimonials.tsx)",
+      "Bash(git -C:*)",
+      "WebFetch(domain:jsoindustries.com)",
+      "Bash(find:*)",
+      "Bash(curl:*)",
+      "Bash(psql:*)",
+      "Bash(/usr/bin/python3 -c \":*)",
+      "Bash(npx next build:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)"
+    ]
+  }
+}
