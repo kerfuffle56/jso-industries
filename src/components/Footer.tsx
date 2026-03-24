@@ -78,18 +78,13 @@ export default function Footer() {
                   office@jsoindustries.com
                 </a>
               </li>
-              <li>Bergen County, NJ</li>
-              <li>Fairfield County, CT</li>
-              <li>Five Boroughs, NY</li>
-              <li>Hudson County, NJ</li>
-              <li>Westchester County, NY</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-14 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/35">
           <p>&copy; {new Date().getFullYear()} JSO Industries. All rights reserved.</p>
-          <p>NY · CT · NJ</p>
+          <p>Westchester County, NY · CT · NJ</p>
         </div>
       </div>
     </footer>

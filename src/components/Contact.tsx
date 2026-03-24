@@ -55,11 +55,10 @@ export default function Contact() {
                 <div>
                   <div className="text-xs text-white/30 uppercase tracking-wider font-medium">Serving</div>
                   <div className="text-base font-semibold text-white leading-relaxed">
-                    Bergen County, NJ<br />
+                    Westchester County, NY<br />
+                    New York City<br />
                     Fairfield County, CT<br />
-                    Five Boroughs, NY<br />
-                    Hudson County, NJ<br />
-                    Westchester County, NY
+                    Bergen County, NJ
                   </div>
                 </div>
               </div>

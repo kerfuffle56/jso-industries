@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "JSO Industries | Development & Contracting",
     description:
-      "Real estate development and contracting firm serving Westchester County, Five Boroughs NY, Fairfield County, Hudson County NJ, and Bergen County NJ.",
+      "Real estate development and contracting firm serving Westchester County, NYC, Fairfield County CT, and Bergen County NJ.",
     url: "https://jsoindustries.com",
     siteName: "JSO Industries Inc.",
     locale: "en_US",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "JSO Industries | Development & Contracting",
     description:
-      "Real estate development and contracting firm serving Westchester County, Five Boroughs NY, Fairfield County, Hudson County NJ, and Bergen County NJ.",
+      "Real estate development and contracting firm serving Westchester County, NYC, Fairfield County CT, and Bergen County NJ.",
     images: ["https://jsoindustries.com/logo-company.jpeg"],
   },
 };

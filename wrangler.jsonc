@@ -4,8 +4,4 @@
   "assets": {
     "directory": "./out"
   },
-  "routes": [
-    { "pattern": "jsoindustries.com/*", "zone_name": "jsoindustries.com" },
-    { "pattern": "www.jsoindustries.com/*", "zone_name": "jsoindustries.com" }
-  ]
 }

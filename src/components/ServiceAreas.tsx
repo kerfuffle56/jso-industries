@@ -1,15 +1,15 @@
 const areas = [
   {
-    state: "New Jersey",
-    counties: ["Bergen County", "Hudson County"],
-  },
-  {
     state: "New York",
-    counties: ["Long Island", "NYC", "Rockland County", "Westchester County"],
+    counties: ["Westchester County", "NYC", "Rockland County", "Long Island"],
   },
   {
     state: "Connecticut",
     counties: ["Fairfield County"],
+  },
+  {
+    state: "New Jersey",
+    counties: ["Bergen County", "Hudson County"],
   },
 ];
 

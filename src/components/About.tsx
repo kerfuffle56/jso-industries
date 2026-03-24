@@ -19,7 +19,7 @@ export default function About() {
 
           <p className="mt-8 text-base text-white/55 leading-relaxed">
             JSO Industries was founded in 2025 with a straightforward goal:
-            deliver exceptional work and exceptional experiences — every time.
+            deliver exceptional work and exceptional experiences, every time.
             We don&apos;t build for one-time transactions. We build relationships
             that last, by earning the trust of every client we work with.
           </p>
@@ -29,10 +29,11 @@ export default function About() {
             under budget and ahead of schedule. No surprises, no excuses.
           </p>
           <p className="mt-5 text-base text-white/55 leading-relaxed">
-            Jonathan brings a decade of hands-on construction experience across
-            New York, Connecticut, and New Jersey — and approaches every client
-            project the same way he approaches his own: with full ownership,
-            full accountability, and zero tolerance for shortcuts.
+            Jonathan brings a decade of hands-on construction experience based
+            out of Westchester County, operating across New York, Connecticut,
+            and New Jersey. He approaches every client project the same way he
+            approaches his own: with full ownership, full accountability, and
+            zero tolerance for shortcuts.
           </p>
         </div>
       </div>
