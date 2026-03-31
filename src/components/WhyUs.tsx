@@ -39,9 +39,9 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section id="why-us" className="py-28 md:py-36 bg-[#0a0a0a] border-t border-white/[0.06] relative overflow-hidden">
+    <section id="why-us" className="py-16 md:py-20 bg-[#0a0a0a] border-t border-white/[0.06] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">
             The Advantage
           </p>

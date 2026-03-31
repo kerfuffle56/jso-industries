@@ -15,7 +15,7 @@ const areas = [
 
 export default function ServiceAreas() {
   return (
-    <section className="py-20 md:py-28 bg-[#0a0a0a] border-t border-white/[0.06]">
+    <section className="py-14 md:py-18 bg-[#0a0a0a] border-t border-white/[0.06]">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
           <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">

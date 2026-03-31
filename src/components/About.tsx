@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="py-28 md:py-36 bg-[#111111] border-t border-white/[0.06] relative overflow-hidden">
+    <section id="about" className="py-16 md:py-20 bg-[#111111] border-t border-white/[0.06] relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-3xl animate-fade-in-up">
           <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">
@@ -31,9 +31,15 @@ export default function About() {
           <p className="mt-5 text-base text-white/55 leading-relaxed">
             Jonathan brings a decade of hands-on construction experience based
             out of Westchester County, operating across New York, Connecticut,
-            and New Jersey. He approaches every client project the same way he
-            approaches his own: with full ownership, full accountability, and
-            zero tolerance for shortcuts.
+            and New Jersey. His background spans construction, business,
+            real estate, and law — giving him a comprehensive lens on every
+            project, from site acquisition and deal structure through
+            permitting, contracts, and delivery.
+          </p>
+          <p className="mt-5 text-base text-white/55 leading-relaxed">
+            He approaches every client project the same way he approaches his
+            own: with full ownership, full accountability, and zero tolerance
+            for shortcuts.
           </p>
         </div>
       </div>

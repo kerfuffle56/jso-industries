@@ -1,6 +1,6 @@
 export default function CtaBanner() {
   return (
-    <section className="py-20 md:py-24 bg-[#111111] relative">
+    <section className="py-12 md:py-16 bg-[#111111] relative">
       <div className="relative max-w-4xl mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-3 mb-6">
           <span className="w-8 h-[2px] bg-accent" />
