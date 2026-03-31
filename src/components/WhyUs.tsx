@@ -19,7 +19,7 @@ const reasons = [
   },
   {
     title: "End-to-End Control",
-    description: "From site identification to final delivery, we manage every phase in-house. No handoffs, no gaps.",
+    description: "From preconstruction through closeout, we manage every phase in-house. No handoffs, no gaps, no finger-pointing.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />

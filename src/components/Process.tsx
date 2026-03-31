@@ -1,27 +1,27 @@
 const steps = [
   {
     number: "01",
-    title: "Site & Opportunity",
+    title: "Preconstruction",
     description:
-      "We identify and underwrite development opportunities. Site visits, feasibility analysis, market study, and acquisition strategy.",
+      "Budget development, estimating, scheduling, and value engineering before a shovel hits the ground. We solve problems on paper — where they're still cheap.",
   },
   {
     number: "02",
-    title: "Entitlements & Design",
+    title: "Design & Permitting",
     description:
-      "We navigate permitting, municipal approvals, zoning, and design development. We know this process from the inside out.",
+      "We coordinate architects, engineers, and consultants while driving municipal approvals and zoning. No hand-offs, no gaps — one team accountable for it all.",
   },
   {
     number: "03",
     title: "Construction",
     description:
-      "We manage the build. Our crews, our schedule, our quality standards. No GC markup layer, no finger-pointing between developer and contractor.",
+      "Self-performing or managing subcontractors with the same ownership standard. Schedule-driven, quality-controlled, and in constant communication.",
   },
   {
     number: "04",
-    title: "Delivery & Value",
+    title: "Closeout & Delivery",
     description:
-      "Certificate of occupancy, lease-up, or sale. We see every project through to realized value, not just substantial completion.",
+      "Punch list, commissioning, certificate of occupancy, and final accounting. We see every project through to realized value — not just substantial completion.",
   },
 ];
 
@@ -31,7 +31,7 @@ export default function Process() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-accent uppercase tracking-widest mb-3">
-            How We Develop
+            How We Work
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
             The Process
