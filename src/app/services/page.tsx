@@ -82,12 +82,12 @@ export default function ServicesPage() {
   return (
     <main className="pt-16">
       {/* ── PAGE HEADER ── */}
-      <section className="border-b border-[#1e1e1e]">
+      <section className="border-b border-[#e8e8e8] bg-white">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
-          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#555] mb-6">
+          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-6">
             What We Do
           </p>
-          <h1 className="text-[clamp(48px,7vw,96px)] font-light text-white leading-[0.88] tracking-tight">
+          <h1 className="text-[clamp(48px,7vw,96px)] font-light text-[#111] leading-[0.88] tracking-tight">
             Nine service lines.
             <br />
             One team.
@@ -96,21 +96,23 @@ export default function ServicesPage() {
       </section>
 
       {/* ── INTRO ── */}
-      <section className="max-w-7xl mx-auto px-6 py-16 md:py-20">
-        <p className="text-[17px] md:text-[19px] text-[#aaa] font-light leading-relaxed max-w-2xl">
-          From the first pencil drawing to the final punch list, JSO Industries
-          handles the full development and construction lifecycle. You can engage
-          us at any stage.
-        </p>
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-14 md:py-20">
+          <p className="text-[17px] md:text-[19px] text-[#555] font-light leading-relaxed max-w-2xl">
+            From the first pencil drawing to the final punch list, JSO Industries
+            handles the full development and construction lifecycle. You can engage
+            us at any stage.
+          </p>
+        </div>
       </section>
 
       {/* ── SERVICES LIST ── */}
-      <section className="border-t border-[#1e1e1e]">
+      <section className="border-t border-[#e8e8e8]">
         <div className="max-w-7xl mx-auto">
           {SERVICES.map((s) => (
             <div
               key={s.n}
-              className="grid grid-cols-1 md:grid-cols-[100px_1fr_1.4fr] gap-0 border-b border-[#1e1e1e] px-6 py-10 md:py-14 hover:bg-[#0d0d0d] transition-colors"
+              className="grid grid-cols-1 md:grid-cols-[100px_1fr_1.4fr] gap-0 border-b border-[#e8e8e8] px-6 py-10 md:py-14 hover:bg-[#f9f9f7] transition-colors"
             >
               <div className="mb-3 md:mb-0 md:pt-1">
                 <p className="text-[10px] font-mono text-[#bf2a2a] tracking-[0.2em]">
@@ -118,12 +120,12 @@ export default function ServicesPage() {
                 </p>
               </div>
               <div className="md:pr-12 mb-3 md:mb-0">
-                <h2 className="text-[20px] md:text-[24px] font-medium text-white leading-tight">
+                <h2 className="text-[20px] md:text-[24px] font-medium text-[#111] leading-tight">
                   {s.name}
                 </h2>
               </div>
               <div>
-                <p className="text-[14px] text-[#888] leading-relaxed">{s.body}</p>
+                <p className="text-[14px] text-[#666] leading-relaxed">{s.body}</p>
               </div>
             </div>
           ))}
@@ -131,32 +133,28 @@ export default function ServicesPage() {
       </section>
 
       {/* ── PROCESS ── */}
-      <section className="border-t border-[#1e1e1e] bg-[#0d0d0d]">
+      <section className="border-t border-[#e8e8e8] bg-[#f7f7f5]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
-          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#555] mb-4">
+          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-4">
             Process
           </p>
-          <h2 className="text-[clamp(28px,3vw,44px)] font-light text-white mb-16">
+          <h2 className="text-[clamp(28px,3vw,44px)] font-light text-[#111] mb-16">
             How a project moves.
           </h2>
-          <div className="border border-[#1e1e1e]">
+          <div className="border border-[#e0e0e0] bg-white">
             <div className="grid grid-cols-1 md:grid-cols-4">
               {PROCESS.map((step, i) => (
                 <div
                   key={step.n}
-                  className={`p-8 md:p-10 border-b md:border-b-0 border-[#1e1e1e] last:border-b-0 ${
+                  className={`p-8 md:p-10 border-b md:border-b-0 border-[#e8e8e8] last:border-b-0 ${
                     i < 3 ? "md:border-r" : ""
                   }`}
                 >
                   <p className="text-[10px] font-mono text-[#bf2a2a] mb-6 tracking-wider">
                     {step.n}
                   </p>
-                  <p className="text-[17px] font-medium text-white mb-3">
-                    {step.phase}
-                  </p>
-                  <p className="text-[13px] text-[#888] leading-relaxed">
-                    {step.desc}
-                  </p>
+                  <p className="text-[17px] font-medium text-[#111] mb-3">{step.phase}</p>
+                  <p className="text-[13px] text-[#666] leading-relaxed">{step.desc}</p>
                 </div>
               ))}
             </div>
@@ -165,14 +163,14 @@ export default function ServicesPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="border-t border-[#1e1e1e]">
+      <section className="bg-[#111]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-10">
             <div>
               <h2 className="text-[clamp(32px,4vw,56px)] font-light text-white">
                 Start with a conversation.
               </h2>
-              <p className="text-[16px] text-[#777] mt-3">
+              <p className="text-[16px] text-[#888] mt-3">
                 Tell us what you&apos;re working on. We&apos;ll tell you if we can help.
               </p>
             </div>

@@ -34,12 +34,12 @@ export default function AboutPage() {
   return (
     <main className="pt-16">
       {/* ── PAGE HEADER ── */}
-      <section className="border-b border-[#1e1e1e]">
+      <section className="border-b border-[#e8e8e8] bg-white">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
-          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#555] mb-6">
+          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-6">
             About JSO Industries
           </p>
-          <h1 className="text-[clamp(48px,7vw,96px)] font-light text-white leading-[0.88] tracking-tight">
+          <h1 className="text-[clamp(48px,7vw,96px)] font-light text-[#111] leading-[0.88] tracking-tight">
             Built on experience.
             <br />
             Driven by ownership.
@@ -48,93 +48,91 @@ export default function AboutPage() {
       </section>
 
       {/* ── COMPANY + FOUNDER ── */}
-      <section className="max-w-7xl mx-auto px-6 py-24 md:py-36">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          <div>
-            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#555] mb-8">
-              The Company
-            </p>
-            <p className="text-[18px] md:text-[20px] text-[#ccc] font-light leading-relaxed mb-6">
-              JSO Industries was founded on a simple premise: the best person to
-              manage your construction project is someone who has skin in the
-              game as a developer.
-            </p>
-            <p className="text-[15px] text-[#888] leading-relaxed mb-6">
-              When you hire a developer who also self-performs construction, you
-              eliminate the adversarial relationship between owner and
-              contractor. You get one team, one set of incentives, and one point
-              of accountability.
-            </p>
-            <p className="text-[15px] text-[#888] leading-relaxed">
-              We operate across New York, Connecticut, and New Jersey, taking on
-              ground-up development, commercial and residential construction,
-              renovations, and advisory work for owners who want a
-              developer&apos;s perspective on their projects.
-            </p>
-          </div>
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+            <div>
+              <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-8">
+                The Company
+              </p>
+              <p className="text-[18px] md:text-[20px] text-[#444] font-light leading-relaxed mb-6">
+                JSO Industries was founded on a simple premise: the best person to
+                manage your construction project is someone who has skin in the
+                game as a developer.
+              </p>
+              <p className="text-[15px] text-[#666] leading-relaxed mb-6">
+                When you hire a developer who also self-performs construction, you
+                eliminate the adversarial relationship between owner and
+                contractor. You get one team, one set of incentives, and one point
+                of accountability.
+              </p>
+              <p className="text-[15px] text-[#666] leading-relaxed">
+                We operate across New York, Connecticut, and New Jersey, taking on
+                ground-up development, commercial and residential construction,
+                renovations, and advisory work for owners who want a
+                developer&apos;s perspective on their projects.
+              </p>
+            </div>
 
-          <div className="border border-[#1e1e1e]">
-            <div className="px-10 pt-10 pb-6 border-b border-[#1e1e1e]">
-              <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#555] mb-6">
-                Founder
-              </p>
-              <p className="text-[28px] font-light text-white mb-2">
-                Jonathan Oronzio
-              </p>
-              <p className="text-[11px] font-mono text-[#444] tracking-[0.2em] uppercase">
-                Founder &amp; Principal
-              </p>
-            </div>
-            <div className="px-10 py-8 flex flex-col gap-5">
-              <p className="text-[14px] text-[#888] leading-relaxed">
-                A decade of hands-on construction experience across residential,
-                commercial, and development projects in the tri-state area.
-              </p>
-              <p className="text-[14px] text-[#888] leading-relaxed">
-                B.S. Business, Fairfield University.
-              </p>
-              <p className="text-[14px] text-[#888] leading-relaxed">
-                Based in Westchester County, NY.
-              </p>
-            </div>
-            <div className="px-10 py-8 border-t border-[#1e1e1e]">
-              <p className="text-[12px] text-[#555] leading-relaxed">
-                Jonathan is personally involved in every JSO project — not as
-                an account manager, but as the person making decisions on your
-                site.
-              </p>
+            <div className="border border-[#e8e8e8]">
+              <div className="px-10 pt-10 pb-6 border-b border-[#e8e8e8]">
+                <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-6">
+                  Founder
+                </p>
+                <p className="text-[28px] font-light text-[#111] mb-2">
+                  Jonathan Oronzio
+                </p>
+                <p className="text-[11px] font-mono text-[#bbb] tracking-[0.2em] uppercase">
+                  Founder &amp; Principal
+                </p>
+              </div>
+              <div className="px-10 py-8 flex flex-col gap-5">
+                <p className="text-[14px] text-[#666] leading-relaxed">
+                  A decade of hands-on construction experience across residential,
+                  commercial, and development projects in the tri-state area.
+                </p>
+                <p className="text-[14px] text-[#666] leading-relaxed">
+                  B.S. Business, Fairfield University.
+                </p>
+                <p className="text-[14px] text-[#666] leading-relaxed">
+                  Based in Westchester County, NY.
+                </p>
+              </div>
+              <div className="px-10 py-8 border-t border-[#e8e8e8] bg-[#f9f9f7]">
+                <p className="text-[12px] text-[#888] leading-relaxed">
+                  Jonathan is personally involved in every JSO project — not as
+                  an account manager, but as the person making decisions on your
+                  site.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── VALUES ── */}
-      <section className="border-t border-[#1e1e1e]">
+      <section className="border-t border-[#e8e8e8] bg-[#f7f7f5]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
-          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#555] mb-4">
+          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-4">
             How We Work
           </p>
-          <h2 className="text-[clamp(28px,3.5vw,48px)] font-light text-white mb-16">
+          <h2 className="text-[clamp(28px,3.5vw,48px)] font-light text-[#111] mb-16">
             Our commitments to every client.
           </h2>
-          <div className="border border-[#1e1e1e]">
+          <div className="border border-[#e0e0e0] bg-white">
             <div className="grid grid-cols-1 md:grid-cols-2">
               {VALUES.map((v, i) => (
                 <div
                   key={v.n}
                   className={`p-10 ${i % 2 === 0 ? "md:border-r" : ""} ${
                     i < 2 ? "border-b" : ""
-                  } border-[#1e1e1e]`}
+                  } border-[#e8e8e8]`}
                 >
                   <p className="text-[10px] font-mono text-[#bf2a2a] mb-6 tracking-wider">
                     {v.n}
                   </p>
-                  <p className="text-[19px] font-medium text-white mb-4">
-                    {v.title}
-                  </p>
-                  <p className="text-[14px] text-[#888] leading-relaxed">
-                    {v.body}
-                  </p>
+                  <p className="text-[19px] font-medium text-[#111] mb-4">{v.title}</p>
+                  <p className="text-[14px] text-[#666] leading-relaxed">{v.body}</p>
                 </div>
               ))}
             </div>
@@ -143,17 +141,17 @@ export default function AboutPage() {
       </section>
 
       {/* ── DIFFERENTIATOR ── */}
-      <section className="border-t border-[#1e1e1e] bg-[#0d0d0d]">
+      <section className="border-t border-[#e8e8e8] bg-white">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
           <div className="max-w-3xl">
-            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#555] mb-6">
+            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-6">
               Why It Matters
             </p>
-            <p className="text-[clamp(18px,2.2vw,26px)] font-light text-[#ccc] leading-relaxed mb-8">
+            <p className="text-[clamp(18px,2.2vw,26px)] font-light text-[#333] leading-relaxed mb-8">
               Most contractors don&apos;t think about your return on investment.
               Most developers don&apos;t get their hands dirty. We do both.
             </p>
-            <p className="text-[15px] text-[#888] leading-relaxed">
+            <p className="text-[15px] text-[#666] leading-relaxed">
               That vertical integration means we catch problems before they
               happen, because we understand both the construction risks and the
               financial consequences. Better decisions, faster execution, and a
@@ -164,12 +162,12 @@ export default function AboutPage() {
       </section>
 
       {/* ── SERVICE AREAS ── */}
-      <section className="border-t border-[#1e1e1e]">
+      <section className="border-t border-[#e8e8e8] bg-[#f7f7f5]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
-          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#555] mb-4">
+          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-4">
             Where We Work
           </p>
-          <h2 className="text-[clamp(28px,3vw,44px)] font-light text-white mb-12">
+          <h2 className="text-[clamp(28px,3vw,44px)] font-light text-[#111] mb-12">
             Tri-state area.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
@@ -186,21 +184,19 @@ export default function AboutPage() {
                   {state}
                 </p>
                 {areas.map((a) => (
-                  <p key={a} className="text-[14px] text-[#888] mb-2.5">
-                    {a}
-                  </p>
+                  <p key={a} className="text-[14px] text-[#666] mb-2.5">{a}</p>
                 ))}
               </div>
             ))}
           </div>
-          <p className="text-[12px] text-[#444] font-mono mt-10">
+          <p className="text-[12px] text-[#bbb] font-mono mt-10">
             Licensed and fully insured in NY, CT, and NJ.
           </p>
         </div>
       </section>
 
       {/* ── CTA ── */}
-      <section className="border-t border-[#1e1e1e]">
+      <section className="bg-[#111]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-10">
             <h2 className="text-[clamp(32px,4vw,56px)] font-light text-white">

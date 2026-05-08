@@ -14,13 +14,13 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a] border-b border-[#1e1e1e]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#e8e8e8]">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex flex-col leading-none" onClick={() => setOpen(false)}>
-          <span className="text-[13px] font-semibold tracking-[0.18em] text-white uppercase">
+          <span className="text-[13px] font-semibold tracking-[0.18em] text-[#111] uppercase">
             JSO Industries
           </span>
-          <span className="text-[9px] font-mono text-[#555] tracking-[0.22em] uppercase mt-0.5">
+          <span className="text-[9px] font-mono text-[#aaa] tracking-[0.22em] uppercase mt-0.5">
             Develop · Build · Own
           </span>
         </Link>
@@ -31,7 +31,7 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               className={`text-[12px] tracking-[0.12em] uppercase font-medium transition-colors duration-150 ${
-                pathname === l.href ? "text-white" : "text-[#777] hover:text-white"
+                pathname === l.href ? "text-[#111]" : "text-[#999] hover:text-[#111]"
               }`}
             >
               {l.label}
@@ -50,20 +50,20 @@ export default function Navbar() {
           onClick={() => setOpen(!open)}
           aria-label="Toggle navigation"
         >
-          <span className={`block h-px w-6 bg-white transition-all duration-200 origin-center ${open ? "rotate-45 translate-y-[5px]" : ""}`} />
-          <span className={`block h-px w-6 bg-white transition-all duration-200 ${open ? "opacity-0" : ""}`} />
-          <span className={`block h-px w-6 bg-white transition-all duration-200 origin-center ${open ? "-rotate-45 -translate-y-[5px]" : ""}`} />
+          <span className={`block h-px w-6 bg-[#111] transition-all duration-200 origin-center ${open ? "rotate-45 translate-y-[5px]" : ""}`} />
+          <span className={`block h-px w-6 bg-[#111] transition-all duration-200 ${open ? "opacity-0" : ""}`} />
+          <span className={`block h-px w-6 bg-[#111] transition-all duration-200 origin-center ${open ? "-rotate-45 -translate-y-[5px]" : ""}`} />
         </button>
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-[#1e1e1e] bg-[#0a0a0a]">
+        <div className="md:hidden border-t border-[#e8e8e8] bg-white">
           {NAV_LINKS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block px-6 py-4 text-[12px] tracking-[0.12em] uppercase text-[#777] hover:text-white border-b border-[#1e1e1e] transition-colors"
+              className="block px-6 py-4 text-[12px] tracking-[0.12em] uppercase text-[#999] hover:text-[#111] border-b border-[#e8e8e8] transition-colors"
             >
               {l.label}
             </Link>
