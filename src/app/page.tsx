@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 
 const STATS = [
@@ -76,7 +75,7 @@ export default function HomePage() {
                 <div className="w-8 h-[2px] bg-[#bf2a2a]" />
                 <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">About</p>
               </div>
-              <h2 className="text-[clamp(30px,3.5vw,48px)] font-light text-[#111] leading-tight mb-8">
+              <h2 className="text-[clamp(30px,3.5vw,52px)] font-light text-[#111] leading-tight mb-8">
                 A developer who builds.<br />A builder who develops.
               </h2>
               <p className="text-[16px] text-[#555] leading-relaxed mb-6">
@@ -91,17 +90,21 @@ export default function HomePage() {
             </div>
 
             <div className="border border-[#e0e0e0] bg-white">
-              <div className="px-8 md:px-10 py-6 bg-[#bf2a2a]">
-                <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-white/70">Our Commitments</p>
+              <div className="px-8 md:px-10 py-4 bg-[#bf2a2a] flex items-center gap-3">
+                <div className="w-5 h-[1px] bg-white/40" />
+                <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-white/80">Our Commitments</p>
               </div>
               {[
                 ["Under Budget",         "We treat your money like our own."],
                 ["Ahead of Schedule",    "We set timelines we can actually hit."],
                 ["One Point of Contact", "Jonathan on every project, period."],
-              ].map(([title, desc]) => (
-                <div key={title} className="px-8 md:px-10 py-6 border-t border-[#e8e8e8]">
-                  <p className="text-[14px] font-semibold text-[#111] mb-1">{title}</p>
-                  <p className="text-[13px] text-[#999]">{desc}</p>
+              ].map(([title, desc], i) => (
+                <div key={title} className="px-8 md:px-10 py-5 border-t border-[#e8e8e8] flex items-start gap-5">
+                  <span className="text-[11px] font-semibold text-[#bf2a2a] mt-0.5 shrink-0 font-mono">0{i + 1}</span>
+                  <div>
+                    <p className="text-[14px] font-semibold text-[#111] mb-1">{title}</p>
+                    <p className="text-[13px] text-[#666]">{desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -118,23 +121,21 @@ export default function HomePage() {
                 <div className="w-8 h-[2px] bg-[#bf2a2a]" />
                 <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">Services</p>
               </div>
-              <h2 className="text-[clamp(30px,3.5vw,48px)] font-light text-[#111] leading-tight">Full-service, start to finish.</h2>
+              <h2 className="text-[clamp(30px,3.5vw,52px)] font-light text-[#111] leading-tight">Complete service, start to finish.</h2>
             </div>
             <Link href="/services" className="text-[12px] tracking-[0.12em] uppercase text-[#bf2a2a] font-semibold hover:underline shrink-0">
               View All →
             </Link>
           </div>
 
-          <div className="border border-[#e0e0e0]">
+          <div className="border border-[#e0e0e0] overflow-hidden">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-              {SERVICES.map((s, i) => (
+              {SERVICES.map((s) => (
                 <div key={s.n}
-                  className={`p-8 group hover:bg-[#bf2a2a] transition-colors duration-200 border-[#e8e8e8] cursor-default
-                    ${i % 3 !== 2 ? "md:border-r" : ""} ${i < 3 ? "md:border-b" : ""}
-                    ${i % 2 === 0 ? "sm:border-r md:border-r-0" : ""} ${i < 4 ? "sm:border-b" : ""}`}
+                  className="p-8 group hover:bg-[#bf2a2a] transition-colors duration-200 border-r border-b border-[#e8e8e8] cursor-default"
                 >
                   <p className="text-[11px] font-mono text-[#bf2a2a] group-hover:text-white/60 mb-4 tracking-wider transition-colors">{s.n}</p>
-                  <p className="text-[15px] font-medium text-[#111] group-hover:text-white transition-colors">{s.name}</p>
+                  <p className="text-[16px] font-medium text-[#111] group-hover:text-white transition-colors">{s.name}</p>
                 </div>
               ))}
             </div>
@@ -149,7 +150,7 @@ export default function HomePage() {
             <div className="w-8 h-[2px] bg-[#bf2a2a]" />
             <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">Service Areas</p>
           </div>
-          <h2 className="text-[clamp(28px,3vw,44px)] font-light text-[#111] mb-16">Serving the tri-state area.</h2>
+          <h2 className="text-[clamp(28px,3vw,48px)] font-light text-[#111] mb-16">Serving the tri-state area.</h2>
           <div className="border border-[#e0e0e0] bg-white">
             <div className="grid grid-cols-1 md:grid-cols-3">
               {AREAS.map((a, i) => (
@@ -171,7 +172,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-10">
             <div>
-              <h2 className="text-[clamp(36px,5vw,72px)] font-light text-white leading-tight">Have a project?</h2>
+              <h2 className="text-[clamp(36px,5vw,76px)] font-light text-white leading-tight">Have a project?</h2>
               <p className="text-[16px] text-[#666] mt-3">Let us talk through what you are building.</p>
             </div>
             <Link href="/contact" className="px-10 py-4 bg-[#bf2a2a] text-white text-[12px] font-semibold tracking-[0.12em] uppercase hover:bg-[#d63031] transition-colors text-center shrink-0">

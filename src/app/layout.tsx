@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     "residential construction",
     "construction management",
     "owner's representative",
-    "preconstruction",
     "Westchester County",
     "Fairfield County Connecticut",
     "Bergen County New Jersey",
@@ -86,7 +85,6 @@ export default function RootLayout({
               description:
                 "Real estate development and general contracting firm serving NY, CT and NJ.",
               url: "https://jsoindustries.com",
-              telephone: "+19144194449",
               email: "office@jsoindustries.com",
               logo: "https://jsoindustries.com/logo-company.jpeg",
               priceRange: "$$",

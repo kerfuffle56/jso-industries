@@ -75,7 +75,7 @@ export default function ServicesPage() {
                 <p className="text-[13px] font-semibold text-[#bf2a2a]">{s.n}</p>
               </div>
               <div className="md:pr-12 mb-3 md:mb-0">
-                <h2 className="text-[20px] md:text-[24px] font-semibold text-[#111] leading-tight group-hover:text-[#bf2a2a] transition-colors">{s.name}</h2>
+                <h2 className="text-[22px] md:text-[26px] font-semibold text-[#111] leading-tight group-hover:text-[#bf2a2a] transition-colors">{s.name}</h2>
               </div>
               <div>
                 <p className="text-[14px] text-[#666] leading-relaxed">{s.body}</p>
@@ -91,14 +91,14 @@ export default function ServicesPage() {
             <div className="w-8 h-[2px] bg-[#bf2a2a]" />
             <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">Process</p>
           </div>
-          <h2 className="text-[clamp(28px,3vw,44px)] font-light text-[#111] mb-16">How a project moves.</h2>
+          <h2 className="text-[clamp(28px,3vw,48px)] font-light text-[#111] mb-16">How a project moves.</h2>
           <div className="border border-[#e0e0e0] bg-white">
             <div className="grid grid-cols-1 md:grid-cols-4">
               {PROCESS.map((step, i) => (
                 <div key={step.n} className={`p-8 md:p-10 border-b md:border-b-0 border-[#e8e8e8] last:border-b-0 ${i < 3 ? "md:border-r" : ""}`}>
                   <p className="text-[13px] font-semibold text-[#bf2a2a] mb-5">{step.n}</p>
-                  <p className="text-[17px] font-semibold text-[#111] mb-3">{step.phase}</p>
-                  <p className="text-[13px] text-[#666] leading-relaxed">{step.desc}</p>
+                  <p className="text-[18px] font-semibold text-[#111] mb-3">{step.phase}</p>
+                  <p className="text-[14px] text-[#666] leading-relaxed">{step.desc}</p>
                 </div>
               ))}
             </div>

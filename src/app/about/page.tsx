@@ -68,14 +68,14 @@ export default function AboutPage() {
             <div className="w-8 h-[2px] bg-[#bf2a2a]" />
             <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">How We Work</p>
           </div>
-          <h2 className="text-[clamp(28px,3.5vw,48px)] font-light text-[#111] mb-16">Our commitments to every client.</h2>
+          <h2 className="text-[clamp(28px,3.5vw,52px)] font-light text-[#111] mb-16">Our commitments to every client.</h2>
           <div className="border border-[#e0e0e0]">
             <div className="grid grid-cols-1 md:grid-cols-2">
               {VALUES.map((v, i) => (
-                <div key={v.n} className={`p-10 bg-white ${i % 2 === 0 ? "md:border-r" : ""} ${i < 2 ? "border-b" : ""} border-[#e8e8e8]`}>
+                <div key={v.n} className={`p-10 bg-white ${i % 2 === 0 ? "md:border-r" : ""} ${i < 3 ? "border-b" : ""} ${i === 2 ? "md:border-b-0" : ""} border-[#e8e8e8]`}>
                   <p className="text-[13px] font-semibold text-[#bf2a2a] mb-4">{v.n}</p>
-                  <p className="text-[19px] font-semibold text-[#111] mb-4">{v.title}</p>
-                  <p className="text-[14px] text-[#666] leading-relaxed">{v.body}</p>
+                  <p className="text-[20px] font-semibold text-[#111] mb-4">{v.title}</p>
+                  <p className="text-[15px] text-[#666] leading-relaxed">{v.body}</p>
                 </div>
               ))}
             </div>
@@ -90,7 +90,7 @@ export default function AboutPage() {
               <div className="w-8 h-[2px] bg-[#bf2a2a]" />
               <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">Why It Matters</p>
             </div>
-            <p className="text-[clamp(18px,2.2vw,26px)] font-light text-[#333] leading-relaxed mb-8">
+            <p className="text-[clamp(19px,2.2vw,28px)] font-light text-[#333] leading-relaxed mb-8">
               Most contractors do not think about your return on investment. Most developers do not get their hands dirty. We do both.
             </p>
             <p className="text-[15px] text-[#666] leading-relaxed">
@@ -106,7 +106,7 @@ export default function AboutPage() {
             <div className="w-8 h-[2px] bg-[#bf2a2a]" />
             <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">Where We Work</p>
           </div>
-          <h2 className="text-[clamp(28px,3vw,44px)] font-light text-[#111] mb-12">Tri-state area.</h2>
+          <h2 className="text-[clamp(28px,3vw,48px)] font-light text-[#111] mb-12">Tri-state area.</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
             {[
               { state: "New York",    areas: ["Westchester County", "New York City", "Rockland County", "Long Island"] },
