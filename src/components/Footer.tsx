@@ -1,90 +1,85 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#111111] text-white/50 py-16 border-t border-white/[0.06]">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-12">
-          {/* Company Info */}
+    <footer className="border-t border-[#1e1e1e] bg-[#0a0a0a]">
+      <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-white leading-none">
-                  JSO Industries
-                </span>
-                <span className="text-[0.6rem] font-semibold tracking-[0.2em] uppercase text-white/40">
-                  Development &amp; Contracting
-                </span>
-              </div>
-            </div>
-            <p className="text-sm leading-relaxed max-w-sm">
-              Real estate development and general contracting across
-              New York, Connecticut, and New Jersey.
+            <p className="text-[13px] font-semibold tracking-[0.18em] uppercase text-white mb-1">
+              JSO Industries
             </p>
-            <a
-              href="https://instagram.com/JSO_Industries"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 mt-5 text-sm hover:text-white transition-colors duration-200"
-            >
-              <Image
-                src="/logo-instagram.png"
-                alt="Instagram"
-                width={24}
-                height={24}
-                className="w-6 h-6 rounded-full"
-              />
-              @JSO_Industries
-            </a>
+            <p className="text-[9px] font-mono text-[#444] tracking-[0.22em] uppercase mb-6">
+              Develop · Build · Own
+            </p>
+            <p className="text-[14px] text-[#666] leading-relaxed max-w-sm">
+              Real estate development and general contracting. We acquire,
+              entitle, and build our own projects — and bring that same
+              developer&apos;s eye to yours.
+            </p>
+            <p className="text-[12px] text-[#444] mt-6 font-mono tracking-wider">
+              Licensed & Insured — NY · CT · NJ
+            </p>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-5 text-xs uppercase tracking-wider">
-              Links
-            </h4>
-            <ul className="space-y-3 text-sm">
+            <p className="text-[10px] font-mono tracking-[0.25em] uppercase text-[#444] mb-6">
+              Navigation
+            </p>
+            <div className="flex flex-col gap-3">
               {[
-                { label: "Home", href: "#home" },
-                { label: "About", href: "#about" },
-                { label: "Services", href: "#services" },
-                { label: "Contact", href: "#contact" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="hover:text-white transition-colors duration-200"
-                  >
-                    {link.label}
-                  </a>
-                </li>
+                { href: "/", label: "Home" },
+                { href: "/about", label: "About" },
+                { href: "/services", label: "Services" },
+                { href: "/contact", label: "Contact" },
+              ].map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className="text-[14px] text-[#777] hover:text-white transition-colors"
+                >
+                  {l.label}
+                </Link>
               ))}
-            </ul>
+            </div>
           </div>
 
-          {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold mb-5 text-xs uppercase tracking-wider">
+            <p className="text-[10px] font-mono tracking-[0.25em] uppercase text-[#444] mb-6">
               Contact
-            </h4>
-            <ul className="space-y-3 text-sm">
-              <li>
-                <a href="tel:9144194449" className="hover:text-white transition-colors duration-200">
-                  (914) 419-4449
-                </a>
-              </li>
-              <li>
-                <a href="mailto:office@jsoindustries.com" className="hover:text-white transition-colors duration-200 break-all">
-                  office@jsoindustries.com
-                </a>
-              </li>
-            </ul>
+            </p>
+            <div className="flex flex-col gap-3">
+              <a
+                href="tel:+19144194449"
+                className="text-[14px] text-[#777] hover:text-white transition-colors"
+              >
+                (914) 419-4449
+              </a>
+              <a
+                href="mailto:office@jsoindustries.com"
+                className="text-[14px] text-[#777] hover:text-white transition-colors"
+              >
+                office@jsoindustries.com
+              </a>
+              <a
+                href="https://instagram.com/JSO_Industries"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[14px] text-[#777] hover:text-white transition-colors"
+              >
+                @JSO_Industries
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/35">
-          <p>&copy; {new Date().getFullYear()} JSO Industries. All rights reserved.</p>
-          <p>Westchester County, NY · CT · NJ</p>
+        <div className="border-t border-[#1e1e1e] mt-16 pt-8 flex flex-col sm:flex-row justify-between gap-4">
+          <p className="text-[12px] text-[#3a3a3a]">
+            © {new Date().getFullYear()} JSO Industries Inc. All rights reserved.
+          </p>
+          <p className="text-[12px] text-[#3a3a3a]">
+            Westchester · NYC · Fairfield County · Bergen County
+          </p>
         </div>
       </div>
     </footer>

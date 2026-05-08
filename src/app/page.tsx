@@ -1,33 +1,259 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
-import About from "@/components/About";
-import Services from "@/components/Services";
-import Process from "@/components/Process";
-import WhyUs from "@/components/WhyUs";
-import CtaBanner from "@/components/CtaBanner";
-import ServiceAreas from "@/components/ServiceAreas";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import VantaBackground from "@/components/VantaBackground";
-import CursorGlow from "@/components/CursorGlow";
+"use client";
 
-export default function Home() {
+import Link from "next/link";
+
+const STATS = [
+  { value: "10+", label: "Years in Construction" },
+  { value: "3", label: "States Licensed" },
+  { value: "9", label: "Service Lines" },
+  { value: "1", label: "Principal on Every Project" },
+];
+
+const SERVICES = [
+  { n: "01", name: "Real Estate Development" },
+  { n: "02", name: "Ground-Up Construction" },
+  { n: "03", name: "Commercial Construction" },
+  { n: "04", name: "Residential Construction" },
+  { n: "05", name: "Interior Renovations" },
+  { n: "06", name: "Exterior Renovations" },
+  { n: "07", name: "Construction Management" },
+  { n: "08", name: "Owner's Representative" },
+  { n: "09", name: "Preconstruction" },
+];
+
+const AREAS = [
+  {
+    state: "New York",
+    places: ["Westchester County", "New York City", "Rockland County", "Long Island"],
+  },
+  { state: "Connecticut", places: ["Fairfield County"] },
+  { state: "New Jersey", places: ["Bergen County", "Hudson County"] },
+];
+
+export default function HomePage() {
   return (
     <main>
-      <CursorGlow />
-      <VantaBackground />
-      <Navbar />
-      <Hero />
-      <Stats />
-      <About />
-      <Services />
-      <Process />
-      <WhyUs />
-      <CtaBanner />
-      <ServiceAreas />
-      <Contact />
-      <Footer />
+      {/* ── HERO ── */}
+      <section className="relative h-screen min-h-[640px] flex items-end overflow-hidden bg-[#0a0a0a]">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+          src="https://assets.mixkit.co/videos/9686/9686-720.mp4"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/50 to-transparent" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 md:pb-28 w-full">
+          <p className="fade-up text-[10px] font-mono tracking-[0.35em] uppercase text-[#bf2a2a] mb-8">
+            JSO Industries / Est. 2025
+          </p>
+          <h1 className="fade-up-1 text-[clamp(60px,10vw,128px)] font-light leading-[0.88] tracking-tight text-white mb-8">
+            DEVELOP.
+            <br />
+            BUILD.
+            <br />
+            OWN.
+          </h1>
+          <p className="fade-up-2 text-[16px] md:text-[18px] text-[#999] font-light leading-relaxed max-w-lg mb-10">
+            We acquire, entitle, and build our own projects. We bring that same
+            developer&apos;s eye to yours.
+          </p>
+          <div className="fade-up-3 flex flex-wrap gap-4">
+            <Link
+              href="/services"
+              className="px-8 py-3.5 bg-white text-[#0a0a0a] text-[12px] font-semibold tracking-[0.12em] uppercase hover:bg-[#bf2a2a] hover:text-white transition-colors duration-150"
+            >
+              Our Services
+            </Link>
+            <Link
+              href="/contact"
+              className="px-8 py-3.5 border border-[#444] text-white text-[12px] font-semibold tracking-[0.12em] uppercase hover:border-white transition-colors duration-150"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── STATS BAR ── */}
+      <section className="border-y border-[#1e1e1e]">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-[#1e1e1e]">
+            {STATS.map((s) => (
+              <div key={s.label} className="px-8 py-10">
+                <p className="text-[40px] md:text-[48px] font-light text-white tracking-tight leading-none mb-2">
+                  {s.value}
+                </p>
+                <p className="text-[11px] text-[#666] uppercase tracking-[0.12em]">
+                  {s.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ABOUT TEASER ── */}
+      <section className="max-w-7xl mx-auto px-6 py-24 md:py-36">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+          <div>
+            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#555] mb-8">
+              About
+            </p>
+            <h2 className="text-[clamp(30px,3.5vw,48px)] font-light text-white leading-tight mb-8">
+              A developer who builds.
+              <br />A builder who develops.
+            </h2>
+            <p className="text-[16px] text-[#888] leading-relaxed mb-6">
+              JSO Industries is a vertically integrated real estate development
+              and general contracting firm based in Westchester County, NY.
+              Founded by Jonathan Oronzio, a decade of field experience means
+              we don&apos;t just plan projects — we execute them.
+            </p>
+            <p className="text-[16px] text-[#888] leading-relaxed mb-10">
+              No middlemen. No markups on the builder. One principal on every
+              project, every time.
+            </p>
+            <Link
+              href="/about"
+              className="inline-block text-[12px] tracking-[0.12em] uppercase text-white border-b border-[#bf2a2a] pb-0.5 hover:text-[#bf2a2a] transition-colors"
+            >
+              Learn More →
+            </Link>
+          </div>
+
+          <div className="border border-[#1e1e1e]">
+            <div className="px-8 md:px-10 pt-8 md:pt-10 pb-2">
+              <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#555]">
+                Our Commitments
+              </p>
+            </div>
+            {[
+              ["Radical Transparency", "You know the numbers. All of them."],
+              ["Under Budget", "We treat your money like our own."],
+              ["Ahead of Schedule", "We set timelines we can actually hit."],
+              ["One Point of Contact", "Jonathan on every project, period."],
+            ].map(([title, desc]) => (
+              <div
+                key={title}
+                className="px-8 md:px-10 py-6 border-t border-[#1e1e1e]"
+              >
+                <p className="text-[14px] font-medium text-white mb-1">
+                  {title}
+                </p>
+                <p className="text-[13px] text-[#666]">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SERVICES ── */}
+      <section className="border-t border-[#1e1e1e]">
+        <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div>
+              <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#555] mb-4">
+                Services
+              </p>
+              <h2 className="text-[clamp(30px,3.5vw,48px)] font-light text-white leading-tight">
+                Full-service, start to finish.
+              </h2>
+            </div>
+            <Link
+              href="/services"
+              className="text-[12px] tracking-[0.12em] uppercase text-[#777] hover:text-white transition-colors shrink-0"
+            >
+              View All Services →
+            </Link>
+          </div>
+
+          <div className="border border-[#1e1e1e]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+              {SERVICES.map((s, i) => (
+                <div
+                  key={s.n}
+                  className={`p-8 group hover:bg-[#111] transition-colors border-[#1e1e1e] ${
+                    i % 3 !== 2 ? "md:border-r" : ""
+                  } ${i < 6 ? "border-b" : ""} ${
+                    i % 2 === 0 ? "sm:border-r md:border-r-0" : ""
+                  } ${i < 8 ? "sm:border-b" : ""}`}
+                >
+                  <p className="text-[10px] font-mono text-[#bf2a2a] mb-4 tracking-wider">
+                    {s.n}
+                  </p>
+                  <p className="text-[15px] font-medium text-white">{s.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SERVICE AREAS ── */}
+      <section className="border-t border-[#1e1e1e] bg-[#0d0d0d]">
+        <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
+          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#555] mb-4">
+            Service Areas
+          </p>
+          <h2 className="text-[clamp(28px,3vw,44px)] font-light text-white mb-16">
+            Serving the tri-state area.
+          </h2>
+          <div className="border border-[#1e1e1e] divide-y md:divide-y-0 md:divide-x divide-[#1e1e1e]">
+            <div className="grid grid-cols-1 md:grid-cols-3">
+              {AREAS.map((a) => (
+                <div key={a.state} className="p-8 md:p-10 border-b md:border-b-0 border-[#1e1e1e] last:border-b-0">
+                  <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a] mb-6">
+                    {a.state}
+                  </p>
+                  <div className="flex flex-col gap-3">
+                    {a.places.map((p) => (
+                      <p key={p} className="text-[15px] text-[#aaa]">
+                        {p}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <p className="text-[12px] text-[#444] mt-8 font-mono">
+            Licensed and fully insured in New York, Connecticut, and New Jersey.
+          </p>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="border-t border-[#1e1e1e]">
+        <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-10">
+            <div>
+              <h2 className="text-[clamp(36px,5vw,72px)] font-light text-white leading-tight">
+                Have a project?
+              </h2>
+              <p className="text-[16px] text-[#777] mt-3">
+                Let&apos;s talk through what you&apos;re building.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+              <Link
+                href="/contact"
+                className="px-10 py-4 bg-[#bf2a2a] text-white text-[12px] font-semibold tracking-[0.12em] uppercase hover:bg-[#d63031] transition-colors text-center"
+              >
+                Start a Conversation
+              </Link>
+              <a
+                href="tel:+19144194449"
+                className="px-10 py-4 border border-[#333] text-white text-[12px] font-semibold tracking-[0.12em] uppercase hover:border-[#666] transition-colors text-center"
+              >
+                (914) 419-4449
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

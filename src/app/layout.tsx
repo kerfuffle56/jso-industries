@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,24 +17,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "JSO Industries | Real Estate Development & General Contracting",
   description:
-    "JSO Industries is a real estate development and contracting firm serving NY, CT and NJ. We acquire, entitle, and build our own projects — and bring that same developer's eye to yours.",
+    "JSO Industries is a real estate development and general contracting firm serving Westchester County, NYC, Fairfield County CT, and Bergen County NJ. We acquire, entitle, and build our own projects — and bring that same developer's eye to yours.",
   keywords: [
     "real estate development",
-    "real estate developer",
-    "ground up construction",
+    "general contractor",
+    "ground-up construction",
     "commercial construction",
     "residential construction",
-    "renovation",
-    "value add real estate",
-    "general contractor",
     "construction management",
-    "New York",
+    "owner's representative",
+    "preconstruction",
     "Westchester County",
-    "Fairfield County",
-    "Connecticut",
-    "New Jersey",
-    "developer contractor",
-    "real estate development New York",
+    "Fairfield County Connecticut",
+    "Bergen County New Jersey",
+    "New York developer",
     "JSO Industries",
   ],
   icons: {
@@ -42,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "JSO Industries | Development & Contracting",
     description:
-      "Real estate development and contracting firm serving Westchester County, NYC, Fairfield County CT, and Bergen County NJ.",
+      "Real estate development and general contracting firm serving Westchester County, NYC, Fairfield County CT, and Bergen County NJ.",
     url: "https://jsoindustries.com",
     siteName: "JSO Industries Inc.",
     locale: "en_US",
@@ -60,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "JSO Industries | Development & Contracting",
     description:
-      "Real estate development and contracting firm serving Westchester County, NYC, Fairfield County CT, and Bergen County NJ.",
+      "Real estate development and general contracting firm serving the tri-state area.",
     images: ["https://jsoindustries.com/logo-company.jpeg"],
   },
 };
@@ -75,7 +73,7 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `if('scrollRestoration'in history){history.scrollRestoration='manual';}if(window.location.hash){history.replaceState(null,'',window.location.pathname);}window.scrollTo(0,0);document.addEventListener('DOMContentLoaded',function(){window.scrollTo(0,0);});`,
+            __html: `if('scrollRestoration'in history){history.scrollRestoration='manual';}window.scrollTo(0,0);`,
           }}
         />
         <script
@@ -84,47 +82,35 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": ["LocalBusiness", "RealEstateAgent"],
-              "name": "JSO Industries",
-              "description": "Real estate development and general contracting firm serving NY, CT and NJ.",
-              "url": "https://jsoindustries.com",
-              "telephone": "+19144194449",
-              "email": "office@jsoindustries.com",
-              "logo": "https://jsoindustries.com/logo-company.jpeg",
-              "image": "https://jsoindustries.com/logo-company.jpeg",
-              "priceRange": "$$",
-              "sameAs": ["https://www.instagram.com/JSO_Industries"],
-              "address": {
+              name: "JSO Industries",
+              description:
+                "Real estate development and general contracting firm serving NY, CT and NJ.",
+              url: "https://jsoindustries.com",
+              telephone: "+19144194449",
+              email: "office@jsoindustries.com",
+              logo: "https://jsoindustries.com/logo-company.jpeg",
+              priceRange: "$$",
+              sameAs: ["https://www.instagram.com/JSO_Industries"],
+              address: {
                 "@type": "PostalAddress",
-                "addressRegion": "NY",
-                "addressCountry": "US"
+                addressRegion: "NY",
+                addressCountry: "US",
               },
-              "areaServed": [
-                { "@type": "AdministrativeArea", "name": "Westchester County, NY" },
-                { "@type": "AdministrativeArea", "name": "New York City, NY" },
-                { "@type": "AdministrativeArea", "name": "Fairfield County, CT" },
-                { "@type": "AdministrativeArea", "name": "Hudson County, NJ" },
-                { "@type": "AdministrativeArea", "name": "Bergen County, NJ" }
+              areaServed: [
+                { "@type": "AdministrativeArea", name: "Westchester County, NY" },
+                { "@type": "AdministrativeArea", name: "New York City, NY" },
+                { "@type": "AdministrativeArea", name: "Fairfield County, CT" },
+                { "@type": "AdministrativeArea", name: "Bergen County, NJ" },
+                { "@type": "AdministrativeArea", name: "Hudson County, NJ" },
               ],
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Services",
-                "itemListElement": [
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Real Estate Development" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "General Contracting" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Property Management" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Project Management" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Buildouts" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential Construction" } }
-                ]
-              }
             }),
           }}
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,35 +1,31 @@
-export default function ThankYou() {
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Thank You | JSO Industries",
+  description: "Message received. We will be in touch within one business day.",
+};
+
+export default function ThankYouPage() {
   return (
-    <main className="min-h-screen flex items-center justify-center hero-gradient relative overflow-hidden">
-      <div className="absolute inset-0 hero-pattern" />
-      <div className="relative text-center px-6 max-w-lg">
-        <div className="w-16 h-16 rounded-full bg-accent/20 text-accent flex items-center justify-center mx-auto mb-8">
-          <svg
-            className="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m4.5 12.75 6 6 9-13.5"
-            />
-          </svg>
-        </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-          Thank You
-        </h1>
-        <p className="mt-4 text-lg text-white/50 leading-relaxed">
-          We&apos;ve received your message and will be in touch shortly.
+    <main className="pt-16 min-h-screen flex items-center">
+      <div className="max-w-7xl mx-auto px-6 py-32">
+        <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a] mb-8">
+          Message Received
         </p>
-        <a
+        <h1 className="text-[clamp(56px,8vw,100px)] font-light text-white leading-[0.88] tracking-tight mb-8">
+          Thank you.
+        </h1>
+        <p className="text-[17px] text-[#888] font-light leading-relaxed max-w-md mb-12">
+          We&apos;ve received your message and will be in touch within one
+          business day.
+        </p>
+        <Link
           href="/"
-          className="inline-flex items-center justify-center mt-10 bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded text-base font-bold tracking-wide uppercase transition-all duration-300 shadow-lg shadow-accent/25"
+          className="inline-block text-[12px] tracking-[0.12em] uppercase text-white border-b border-[#bf2a2a] pb-0.5 hover:text-[#bf2a2a] transition-colors"
         >
-          Back to Home
-        </a>
+          ← Back to Home
+        </Link>
       </div>
     </main>
   );
