@@ -34,11 +34,14 @@ export default function AboutPage() {
   return (
     <main className="pt-16">
       {/* ── PAGE HEADER ── */}
-      <section className="border-b border-[#e8e8e8] bg-white">
+      <section className="border-b border-[#e8e8e8] bg-white" style={{ borderTop: "3px solid #bf2a2a" }}>
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
-          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-6">
-            About JSO Industries
-          </p>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-8 h-[2px] bg-[#bf2a2a]" />
+            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">
+              About JSO Industries
+            </p>
+          </div>
           <h1 className="text-[clamp(48px,7vw,96px)] font-light text-[#111] leading-[0.88] tracking-tight">
             Built on experience.
             <br />
@@ -48,13 +51,10 @@ export default function AboutPage() {
       </section>
 
       {/* ── COMPANY + FOUNDER ── */}
-      <section className="bg-white">
+      <section className="bg-white border-b border-[#e8e8e8]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-8">
-                The Company
-              </p>
               <p className="text-[18px] md:text-[20px] text-[#444] font-light leading-relaxed mb-6">
                 JSO Industries was founded on a simple premise: the best person to
                 manage your construction project is someone who has skin in the
@@ -75,26 +75,26 @@ export default function AboutPage() {
             </div>
 
             <div className="border border-[#e8e8e8]">
-              <div className="px-10 pt-10 pb-6 border-b border-[#e8e8e8]">
-                <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-6">
+              <div className="px-10 pt-10 pb-6 bg-[#bf2a2a]">
+                <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-white/70 mb-6">
                   Founder
                 </p>
-                <p className="text-[28px] font-light text-[#111] mb-2">
+                <p className="text-[28px] font-light text-white mb-2">
                   Jonathan Oronzio
                 </p>
-                <p className="text-[11px] font-mono text-[#bbb] tracking-[0.2em] uppercase">
+                <p className="text-[11px] font-mono text-white/60 tracking-[0.2em] uppercase">
                   Founder &amp; Principal
                 </p>
               </div>
               <div className="px-10 py-8 flex flex-col gap-5">
-                <p className="text-[14px] text-[#666] leading-relaxed">
+                <p className="text-[14px] text-[#555] leading-relaxed">
                   A decade of hands-on construction experience across residential,
                   commercial, and development projects in the tri-state area.
                 </p>
-                <p className="text-[14px] text-[#666] leading-relaxed">
+                <p className="text-[14px] text-[#555] leading-relaxed">
                   B.S. Business, Fairfield University.
                 </p>
-                <p className="text-[14px] text-[#666] leading-relaxed">
+                <p className="text-[14px] text-[#555] leading-relaxed">
                   Based in Westchester County, NY.
                 </p>
               </div>
@@ -111,11 +111,14 @@ export default function AboutPage() {
       </section>
 
       {/* ── VALUES ── */}
-      <section className="border-t border-[#e8e8e8] bg-[#f7f7f5]">
+      <section className="bg-[#f7f7f5] border-b border-[#e8e8e8]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
-          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-4">
-            How We Work
-          </p>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-8 h-[2px] bg-[#bf2a2a]" />
+            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">
+              How We Work
+            </p>
+          </div>
           <h2 className="text-[clamp(28px,3.5vw,48px)] font-light text-[#111] mb-16">
             Our commitments to every client.
           </h2>
@@ -124,14 +127,10 @@ export default function AboutPage() {
               {VALUES.map((v, i) => (
                 <div
                   key={v.n}
-                  className={`p-10 ${i % 2 === 0 ? "md:border-r" : ""} ${
-                    i < 2 ? "border-b" : ""
-                  } border-[#e8e8e8]`}
+                  className={`p-10 ${i % 2 === 0 ? "md:border-r" : ""} ${i < 2 ? "border-b" : ""} border-[#e8e8e8]`}
                 >
-                  <p className="text-[10px] font-mono text-[#bf2a2a] mb-6 tracking-wider">
-                    {v.n}
-                  </p>
-                  <p className="text-[19px] font-medium text-[#111] mb-4">{v.title}</p>
+                  <p className="text-[13px] font-semibold text-[#bf2a2a] mb-4">{v.n}</p>
+                  <p className="text-[19px] font-semibold text-[#111] mb-4">{v.title}</p>
                   <p className="text-[14px] text-[#666] leading-relaxed">{v.body}</p>
                 </div>
               ))}
@@ -141,12 +140,15 @@ export default function AboutPage() {
       </section>
 
       {/* ── DIFFERENTIATOR ── */}
-      <section className="border-t border-[#e8e8e8] bg-white">
+      <section className="bg-white border-b border-[#e8e8e8]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
           <div className="max-w-3xl">
-            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-6">
-              Why It Matters
-            </p>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-8 h-[2px] bg-[#bf2a2a]" />
+              <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">
+                Why It Matters
+              </p>
+            </div>
             <p className="text-[clamp(18px,2.2vw,26px)] font-light text-[#333] leading-relaxed mb-8">
               Most contractors don&apos;t think about your return on investment.
               Most developers don&apos;t get their hands dirty. We do both.
@@ -162,29 +164,27 @@ export default function AboutPage() {
       </section>
 
       {/* ── SERVICE AREAS ── */}
-      <section className="border-t border-[#e8e8e8] bg-[#f7f7f5]">
+      <section className="bg-[#f7f7f5] border-b border-[#e8e8e8]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
-          <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bbb] mb-4">
-            Where We Work
-          </p>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-8 h-[2px] bg-[#bf2a2a]" />
+            <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">
+              Where We Work
+            </p>
+          </div>
           <h2 className="text-[clamp(28px,3vw,44px)] font-light text-[#111] mb-12">
             Tri-state area.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
             {[
-              {
-                state: "New York",
-                areas: ["Westchester County", "New York City", "Rockland County", "Long Island"],
-              },
+              { state: "New York", areas: ["Westchester County", "New York City", "Rockland County", "Long Island"] },
               { state: "Connecticut", areas: ["Fairfield County"] },
               { state: "New Jersey", areas: ["Bergen County", "Hudson County"] },
             ].map(({ state, areas }) => (
               <div key={state}>
-                <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a] mb-5">
-                  {state}
-                </p>
+                <p className="text-[13px] font-semibold text-[#bf2a2a] mb-5">{state}</p>
                 {areas.map((a) => (
-                  <p key={a} className="text-[14px] text-[#666] mb-2.5">{a}</p>
+                  <p key={a} className="text-[14px] text-[#555] mb-2.5">{a}</p>
                 ))}
               </div>
             ))}
