@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About | JSO Industries",
-  description: "JSO Industries is a vertically integrated real estate development and general contracting firm based in Westchester County, NY. Founded by Jonathan Oronzio.",
+  description: "JSO Industries is a vertically integrated real estate development and general contracting firm based in Westchester County, NY.",
 };
 
 const VALUES = [
@@ -16,65 +16,65 @@ const VALUES = [
 export default function AboutPage() {
   return (
     <main className="pt-16">
-      <section className="bg-[#0a0a0a] border-b border-[#1e1e1e]" style={{ borderTop: "3px solid #bf2a2a" }}>
+      <section className="bg-white border-b border-[#e8e8e8]" style={{ borderTop: "3px solid #bf2a2a" }}>
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-8 h-[2px] bg-[#bf2a2a]" />
             <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">About JSO Industries</p>
           </div>
-          <h1 className="text-[clamp(48px,7vw,96px)] font-light text-white leading-[0.88] tracking-tight">
+          <h1 className="text-[clamp(48px,7vw,96px)] font-light text-[#111] leading-[0.88] tracking-tight">
             Built on experience.<br />Driven by ownership.
           </h1>
         </div>
       </section>
 
-      <section className="bg-[#141414] border-b border-[#1e1e1e]">
+      <section className="bg-[#f7f7f5] border-b border-[#e8e8e8]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-[18px] md:text-[20px] text-[#aaa] font-light leading-relaxed mb-6">
+              <p className="text-[18px] md:text-[20px] text-[#333] font-light leading-relaxed mb-6">
                 JSO Industries was founded on a simple premise: the best person to manage your construction project is someone who has skin in the game as a developer.
               </p>
               <p className="text-[15px] text-[#666] leading-relaxed mb-6">
-                When you hire a developer who also self-performs construction, you eliminate the adversarial relationship between owner and contractor. You get one team, one set of incentives, and one point of accountability.
+                When you hire a developer who also self-performs construction, you eliminate the adversarial relationship between owner and contractor. One team, one set of incentives, one point of accountability.
               </p>
               <p className="text-[15px] text-[#666] leading-relaxed">
                 We operate across New York, Connecticut, and New Jersey, taking on ground-up development, commercial and residential construction, renovations, and advisory work for owners who want a developer perspective on their projects.
               </p>
             </div>
 
-            <div className="border border-[#1e1e1e]">
+            <div className="border border-[#e0e0e0] bg-white">
               <div className="px-10 py-8 bg-[#bf2a2a]">
                 <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-white/70 mb-5">Founder</p>
                 <p className="text-[28px] font-light text-white mb-2">Jonathan Oronzio</p>
                 <p className="text-[11px] font-mono text-white/60 tracking-[0.2em] uppercase">Founder and Principal</p>
               </div>
               <div className="px-10 py-8 flex flex-col gap-5">
-                <p className="text-[14px] text-[#666] leading-relaxed">A decade of hands-on construction experience across residential, commercial, and development projects in the tri-state area.</p>
-                <p className="text-[14px] text-[#666] leading-relaxed">B.S. Business, Fairfield University.</p>
-                <p className="text-[14px] text-[#666] leading-relaxed">Based in Westchester County, NY.</p>
+                <p className="text-[14px] text-[#555] leading-relaxed">A decade of hands-on construction experience across residential, commercial, and development projects in the tri-state area.</p>
+                <p className="text-[14px] text-[#555] leading-relaxed">B.S. Business, Fairfield University.</p>
+                <p className="text-[14px] text-[#555] leading-relaxed">Based in Westchester County, NY.</p>
               </div>
-              <div className="px-10 py-8 border-t border-[#1e1e1e] bg-[#111]">
-                <p className="text-[12px] text-[#555] leading-relaxed">Jonathan is personally involved in every JSO project. Not as an account manager, but as the person making decisions on your site.</p>
+              <div className="px-10 py-8 border-t border-[#e8e8e8] bg-[#f9f9f7]">
+                <p className="text-[12px] text-[#888] leading-relaxed">Jonathan is personally involved in every JSO project. Not as an account manager, but as the person making decisions on your site.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#0a0a0a] border-b border-[#1e1e1e]">
+      <section className="bg-white border-b border-[#e8e8e8]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-8 h-[2px] bg-[#bf2a2a]" />
             <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">How We Work</p>
           </div>
-          <h2 className="text-[clamp(28px,3.5vw,48px)] font-light text-white mb-16">Our commitments to every client.</h2>
-          <div className="border border-[#1e1e1e]">
+          <h2 className="text-[clamp(28px,3.5vw,48px)] font-light text-[#111] mb-16">Our commitments to every client.</h2>
+          <div className="border border-[#e0e0e0]">
             <div className="grid grid-cols-1 md:grid-cols-2">
               {VALUES.map((v, i) => (
-                <div key={v.n} className={`p-10 ${i % 2 === 0 ? "md:border-r" : ""} ${i < 2 ? "border-b" : ""} border-[#1e1e1e] bg-[#0d0d0d]`}>
+                <div key={v.n} className={`p-10 bg-white ${i % 2 === 0 ? "md:border-r" : ""} ${i < 2 ? "border-b" : ""} border-[#e8e8e8]`}>
                   <p className="text-[13px] font-semibold text-[#bf2a2a] mb-4">{v.n}</p>
-                  <p className="text-[19px] font-semibold text-white mb-4">{v.title}</p>
+                  <p className="text-[19px] font-semibold text-[#111] mb-4">{v.title}</p>
                   <p className="text-[14px] text-[#666] leading-relaxed">{v.body}</p>
                 </div>
               ))}
@@ -83,14 +83,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#141414] border-b border-[#1e1e1e]">
+      <section className="bg-[#f7f7f5] border-b border-[#e8e8e8]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-[2px] bg-[#bf2a2a]" />
               <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">Why It Matters</p>
             </div>
-            <p className="text-[clamp(18px,2.2vw,26px)] font-light text-[#aaa] leading-relaxed mb-8">
+            <p className="text-[clamp(18px,2.2vw,26px)] font-light text-[#333] leading-relaxed mb-8">
               Most contractors do not think about your return on investment. Most developers do not get their hands dirty. We do both.
             </p>
             <p className="text-[15px] text-[#666] leading-relaxed">
@@ -100,13 +100,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-[#0a0a0a] border-b border-[#1e1e1e]">
+      <section className="bg-white border-b border-[#e8e8e8]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-8 h-[2px] bg-[#bf2a2a]" />
             <p className="text-[10px] font-mono tracking-[0.3em] uppercase text-[#bf2a2a]">Where We Work</p>
           </div>
-          <h2 className="text-[clamp(28px,3vw,44px)] font-light text-white mb-12">Tri-state area.</h2>
+          <h2 className="text-[clamp(28px,3vw,44px)] font-light text-[#111] mb-12">Tri-state area.</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
             {[
               { state: "New York",    areas: ["Westchester County", "New York City", "Rockland County", "Long Island"] },
@@ -119,11 +119,11 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-          <p className="text-[12px] text-[#333] font-mono mt-10">Licensed and fully insured in NY, CT, and NJ.</p>
+          <p className="text-[12px] text-[#bbb] font-mono mt-10">Licensed and fully insured in NY, CT, and NJ.</p>
         </div>
       </section>
 
-      <section className="bg-[#141414]">
+      <section className="bg-[#111]">
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-36">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-10">
             <h2 className="text-[clamp(32px,4vw,56px)] font-light text-white">Ready to work together?</h2>
