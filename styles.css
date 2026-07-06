@@ -169,7 +169,7 @@ body {
 .nav__links {
   margin-left: auto;
   display: flex;
-  gap: 28px;
+  gap: 26px;
 }
 .nav__links a {
   color: rgba(247, 248, 246, 0.72);
@@ -179,6 +179,7 @@ body {
   padding: 6px 0;
   transition: color 0.15s ease;
   position: relative;
+  white-space: nowrap;
 }
 .nav__links a::after {
   content: "";
