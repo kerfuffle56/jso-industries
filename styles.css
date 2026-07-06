@@ -1,14 +1,15 @@
 /* ---------- tokens ---------- */
 :root {
-  --navy: #0E1B2C;
-  --navy-2: #14263C;
-  --paper: #F7F8F6;
-  --paper-white: #FFFFFF;
-  --slate: #44546A;
-  --slate-2: #6B7A90;
-  --amber: #F5A623;
-  --amber-hi: #FFB833;
-  --hairline: #D8DDE3;
+  /* Palette: red / white / grey / black */
+  --navy: #0A0A0A;         /* black surfaces (hero, footer) */
+  --navy-2: #151515;
+  --paper: #F4F4F4;        /* subtle grey body background */
+  --paper-white: #FFFFFF;  /* white cards / body sections */
+  --slate: #4B5563;        /* grey secondary text */
+  --slate-2: #6B7280;
+  --amber: #C8102E;        /* red accent */
+  --amber-hi: #E11836;     /* red hover */
+  --hairline: #E5E5E5;     /* grey hairlines */
 
   --f-display: 'Space Grotesk', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   --f-body: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
@@ -111,7 +112,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(14, 27, 44, 0.9);
+  background: rgba(10, 10, 10, 0.92);
   backdrop-filter: saturate(1.4) blur(14px);
   -webkit-backdrop-filter: saturate(1.4) blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -311,7 +312,7 @@ body {
 .service-card:hover {
   border-color: var(--amber);
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px -20px rgba(14, 27, 44, 0.25);
+  box-shadow: 0 12px 40px -20px rgba(10, 10, 10, 0.22);
 }
 
 .service-card__label {
@@ -477,7 +478,7 @@ body {
 .field textarea:focus {
   outline: none;
   border-color: var(--navy);
-  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.18);
+  box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.16);
 }
 
 .form__status {
@@ -538,7 +539,7 @@ body {
   animation: fiber-pulse 2.2s ease-in-out infinite;
 }
 .fiber-route .fiber-halo {
-  fill: rgba(245, 166, 35, 0.25);
+  fill: rgba(200, 16, 46, 0.25);
   animation: fiber-halo 2.2s ease-out infinite;
 }
 
